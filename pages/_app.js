@@ -13,10 +13,11 @@ function AppWrapper({ children }) {
     const { id } = router.query;
     if (id) {
       const recordKey = id[0];
-      const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
-        process.env.AIRTABLE_BASE_KEY
+      // Should use env for api keys
+      const base = new Airtable({ apiKey: "keyIwpcQ1fBXlxCcq" }).base(
+        "app4MqGYcYLzCIZTb"
       );
-      base(process.env.AIRTABLE_TABLE_NAME).find(recordKey, (err, record) => {
+      base("Table 1").find(recordKey, (err, record) => {
         if (err) {
           console.error(err);
           return;
