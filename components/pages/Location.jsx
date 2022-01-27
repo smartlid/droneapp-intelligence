@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Airtable from "airtable";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Home from "./slides/Home";
+import Product from "./slides/Product";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -58,7 +59,7 @@ export default function Location() {
       longSwipesMs={2000}
     >
       <SwiperSlide><Home record={record} /></SwiperSlide>
-      <SwiperSlide style={{ backgroundColor: 'red' }}>Slide 2</SwiperSlide>
+      <SwiperSlide><Product record={record} /></SwiperSlide>
       <SwiperSlide style={{ backgroundColor: 'yellow' }}>Slide 3</SwiperSlide>
       <SwiperSlide style={{ backgroundColor: 'green' }}>Slide 4</SwiperSlide>
     </Swiper>
