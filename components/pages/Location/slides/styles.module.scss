@@ -5,9 +5,10 @@
 }
 
 .slide-home::before {
+  content: "";
   position: absolute;
   width: 10px;
-  height: 100px;
+  height: 60px;
   left: 0px;
   top: 0px;
   background: linear-gradient(135.11deg, #0A8EDE 3.78%, #075BBD 94.58%);
@@ -17,48 +18,54 @@
   background-image: linear-gradient(#075BBD1A, #C4C4C400);
 }
 
-.home-logo {
-  position: absolute;
-  width: 251px;
-  height: 105px;
-  left: 60px;
-  top: 70px;
+.home {
+  &__logo {
+    width: 200px;
+    height: 70px;
+    left: 60px;
+    top: 70px;
+    margin: 60px 0 0 60px;
 
-  opacity: 0;
-  animation-fill-mode: forwards;
-}
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
 
-.home-title {
-  position: absolute;
-  width: 1282px;
-  height: 120px;
-  left: -100px;
-  top: 130px;
+  &__title {
+    margin: 40px 0 0 60px;
+    font-weight: bolder;
+    font-size: 90px;
+    line-height: 100%;
+    text-align: left;
 
-  font-style: normal;
-  font-weight: bolder;
-  font-size: 120px;
-  line-height: 100%;
-  text-align: center;
+    animation-delay: .2s;
+  }
 
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-delay: .2s;
-}
+  &__address {
+    margin: 10px 0 0 65px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 47px;
+    color: #868686;
+    min-height: 47px;
 
-.home-address {
-  position: absolute;
-  height: 47px;
-  left: 70px;
-  top: 300px;
+    animation-delay: .4s;
+  }
 
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 47px;
-  color: #868686;
+  &__map-area {
+    position: relative;
+    width: 50%;
+    margin: 60px auto 0;
+    animation-delay: .5s;
+  }
 
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-delay: .4s;
+  &__drone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 40px;
+
+    animation-delay: .5s;
+  }
 }

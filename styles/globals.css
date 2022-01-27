@@ -50,7 +50,6 @@ a {
 }
   
 .swiper-slide {
-  text-align: center;
   font-size: 18px;
   background: #fff;
 
@@ -95,12 +94,13 @@ a {
 .fade-in-top-down {
   opacity: 0;
   animation: fade-in-top-down 1s 1 ease-out;
-  /* animation-delay: .5s;
-  animation-fill-mode: forwards; */
+  animation-fill-mode: forwards;
 }
 
 .fade-in-left-right {
+  opacity: 0;
   animation: fade-in-left-right 1s 1 ease-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fade-in-top-down {
