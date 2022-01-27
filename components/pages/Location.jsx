@@ -1,5 +1,8 @@
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import Airtable from "airtable";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Home from "./slides/Home.jsx";
+import Home from "./slides/Home";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -18,6 +21,29 @@ SwiperCore.use([
 ]);
 
 export default function Location() {
+  const router = useRouter();
+  const [record, setRecord] = useState();
+
+  // Get airtable data
+  useEffect(() => {
+    const { id } = router.query;
+    if (id) {
+      const recordKey = id[0];
+      // Should use env for api keys
+      const base = new Airtable({ apiKey: "keyIwpcQ1fBXlxCcq" }).base(
+        "app4MqGYcYLzCIZTb"
+      );
+      base("Table 1").find(recordKey, (err, record) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+
+        setRecord(record);
+      });
+    }
+  }, [router.query]);
+
   return (
     <Swiper
       direction="vertical"
@@ -31,7 +57,7 @@ export default function Location() {
       mousewheel={true}
       longSwipesMs={2000}
     >
-      <SwiperSlide><Home /></SwiperSlide>
+      <SwiperSlide><Home record={record} /></SwiperSlide>
       <SwiperSlide style={{ backgroundColor: 'red' }}>Slide 2</SwiperSlide>
       <SwiperSlide style={{ backgroundColor: 'yellow' }}>Slide 3</SwiperSlide>
       <SwiperSlide style={{ backgroundColor: 'green' }}>Slide 4</SwiperSlide>
