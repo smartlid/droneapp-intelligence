@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Location from "../components/pages/Location.js";
-import styles from "../styles/Home.module.css";
+import Location from "../components/pages/Location";
+import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
