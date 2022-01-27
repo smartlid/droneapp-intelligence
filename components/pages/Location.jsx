@@ -57,7 +57,7 @@ console.log('After getting data: ', record)
       }}
       slidesPerView={1}
       mousewheel={true}
-      longSwipesMs={2000}
+      speed={1000}
     >
       <SwiperSlide><Home record={record} /></SwiperSlide>
       <SwiperSlide><Product record={record} /></SwiperSlide>
