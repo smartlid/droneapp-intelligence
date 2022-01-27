@@ -4,6 +4,7 @@ import Airtable from "airtable";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Home from "./slides/Home";
 import Product from "./slides/Product";
+import Overview from "./slides/Overview";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -39,7 +40,7 @@ export default function Location() {
           console.error(err);
           return;
         }
-
+console.log('After getting data: ', record)
         setRecord(record);
       });
     }
@@ -60,8 +61,8 @@ export default function Location() {
     >
       <SwiperSlide><Home record={record} /></SwiperSlide>
       <SwiperSlide><Product record={record} /></SwiperSlide>
-      <SwiperSlide style={{ backgroundColor: 'yellow' }}>Slide 3</SwiperSlide>
-      <SwiperSlide style={{ backgroundColor: 'green' }}>Slide 4</SwiperSlide>
+      <SwiperSlide><Overview record={record} /></SwiperSlide>
+      <SwiperSlide><Home record={record} /></SwiperSlide>
     </Swiper>
   );
 }

@@ -1,15 +1,6 @@
-import { useEffect, useState } from "react";
 import styles from "./styles.module.scss"
 
 export default function Product({ record }) {
-  const [address, setAddress] = useState('');
-
-  useEffect(() => {
-    if (record) {
-      setAddress(record.fields['Property Address']);
-    }
-  }, [record])
-
   return (
     <div className={`${styles.slide} ${styles["slide-product"]} ${styles.product}`}>
       <div className={styles.product__left}>
