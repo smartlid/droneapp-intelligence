@@ -59,10 +59,18 @@ console.log('After getting data: ', record)
       mousewheel={true}
       speed={1000}
     >
-      <SwiperSlide><Home record={record} /></SwiperSlide>
-      <SwiperSlide><Product record={record} /></SwiperSlide>
-      <SwiperSlide><Overview record={record} /></SwiperSlide>
-      <SwiperSlide><Home record={record} /></SwiperSlide>
+      <SwiperSlide>
+        {({ isActive }) => isActive && (<Home record={record} />)}
+      </SwiperSlide>
+      <SwiperSlide>
+        {({ isActive }) => isActive && (<Product record={record} />)}
+      </SwiperSlide>
+      <SwiperSlide>
+        {({ isActive }) => isActive && (<Overview record={record} />)}
+      </SwiperSlide>
+      <SwiperSlide>
+        {({ isActive }) => isActive && (<Home record={record} />)}
+      </SwiperSlide>
     </Swiper>
   );
 }

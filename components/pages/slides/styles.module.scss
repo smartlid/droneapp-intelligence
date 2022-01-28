@@ -51,6 +51,7 @@
 
     opacity: 0;
     animation-fill-mode: forwards;
+    animation-delay: .5s;
   }
 
   &__title {
@@ -60,7 +61,7 @@
     line-height: 100%;
     text-align: left;
 
-    animation-delay: .2s;
+    animation-delay: .7s;
   }
 
   &__address {
@@ -72,14 +73,14 @@
     color: #868686;
     min-height: 47px;
 
-    animation-delay: .4s;
+    animation-delay: .9s;
   }
 
   &__map-area {
     position: relative;
     width: 50%;
     margin: 60px auto 0;
-    animation-delay: .5s;
+    animation-delay: .9s;
   }
 
   &__drone {
@@ -89,7 +90,7 @@
     width: 100px;
     height: 40px;
 
-    animation-delay: .5s;
+    animation-delay: 1s;
   }
 }
 
@@ -107,6 +108,7 @@
 
     opacity: 0;
     animation-fill-mode: forwards;
+    animation-delay: .5s;
   }
 
   &__left {
@@ -132,6 +134,7 @@
     font-size: 60px;
     position: relative;
     margin: 20px 0;
+    animation-delay: 0.9s;
   }
 
   &__title-logo {
@@ -140,11 +143,13 @@
     left: 0;
     width: 53px;
     height: 56px;
+    animation-delay: 0.8s;
   }
 
   &__description {
     font-size: 24px;
     color: #8B8B8B;
+    animation-delay: 1.2s;
   } 
 
   &__roof-scheme-area {
@@ -161,6 +166,8 @@
     right: 0;
     width: 100px;
     height: 40px;
+
+    animation-delay: .8s;
   }
 }
 
@@ -176,6 +183,7 @@
 
     opacity: 0;
     animation-fill-mode: forwards;
+    animation-delay: .5s;
   }
 
   &__title {
@@ -185,7 +193,7 @@
     line-height: 100%;
     text-align: left;
 
-    animation-delay: .2s;
+    animation-delay: .7s;
   }
 
   &__address {
@@ -197,6 +205,6 @@
     min-height: 47px;
     color: #E5E5E5;
 
-    animation-delay: .4s;
+    animation-delay: .9s;
   }
 }
