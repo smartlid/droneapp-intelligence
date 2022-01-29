@@ -1,15 +1,6 @@
-import { useEffect, useState } from "react";
 import styles from "./styles.module.scss"
 
 export default function Storm({ record }) {
-  const [address, setAddress] = useState('');
-
-  useEffect(() => {
-    if (record) {
-      setAddress(record.fields['Property Address']);
-    }
-  }, [record])
-
   return (
     <div className={`${styles.slide} ${styles["slide-storm"]} ${styles.storm}`}>
       <img
