@@ -49,7 +49,7 @@ export default function Hail({ record }) {
         <div style={{ flex: "1 0" }}>
           <h1 className={`${styles.hail__title} fade-in-top-down`}>DFW HAIL</h1>
           <p className={`${styles.hail__description} fade-in-top-down`}>
-            The DFW metroplex is in the heart of the nation's hail alley.
+            {"The DFW metroplex is in the heart of the nation's hail alley"}.
           </p>
 
           <div style={{ padding: "20px 0" }}>
@@ -113,7 +113,7 @@ export default function Hail({ record }) {
                       }}
                       className="scale-w-up"
                     >
-                      1.5" + HAIL
+                      {'1.5" + HAIL'}
                     </p>
                   </div>
                 </div>
