@@ -208,3 +208,54 @@
     animation-delay: .9s;
   }
 }
+
+.storm {
+  color: #fff;
+  background: #000000;
+
+  &__content {
+    margin: 100px 0 0;
+    padding: 0 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+  }
+
+  &__logo {
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    left: 60px;
+    top: 40px;
+
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: bolder;
+    font-size: 70px;
+    line-height: 100%;
+    text-align: left;
+
+    animation-delay: .7s;
+  }
+
+  &__description {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: left;
+
+    animation-delay: .9s;
+  }
+
+  &__map-area {
+    position: relative;
+    padding: 20px 10px;
+    animation-delay: .9s;
+    height: 550px;
+  }
+}

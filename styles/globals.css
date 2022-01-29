@@ -103,6 +103,16 @@ a {
   animation-fill-mode: forwards;
 }
 
+.scale-h-up {
+  animation: scale-h-up 1s 1 ease-out;
+  animation-fill-mode: forwards;
+}
+
+.scale-w-up {
+  animation: scale-w-up 1s 1 ease-out;
+  animation-fill-mode: forwards;
+}
+
 @keyframes fade-in-top-down {
   0% {
     opacity: 0;
@@ -124,5 +134,25 @@ a {
   100% {
     opacity: 1;
     transform: translate(0, 0);
+  }
+}
+
+@keyframes scale-w-up {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes scale-h-up {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
   }
 }

@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Home from "./slides/Home";
 import Product from "./slides/Product";
 import Overview from "./slides/Overview";
+import Storm from "./slides/Storm";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -69,7 +70,7 @@ console.log('After getting data: ', record)
         {({ isActive }) => isActive && (<Overview record={record} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Home record={record} />)}
+        {({ isActive }) => isActive && (<Storm record={record} />)}
       </SwiperSlide>
     </Swiper>
   );
