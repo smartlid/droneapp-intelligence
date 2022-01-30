@@ -316,3 +316,20 @@
     height: 550px;
   }
 }
+
+.insurance {
+  color: #fff;
+  background: #000000;
+  
+  &__logo {
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    left: 60px;
+    top: 40px;
+
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+  }
+}

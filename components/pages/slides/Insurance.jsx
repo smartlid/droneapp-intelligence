@@ -1,10 +1,72 @@
-import slideStyles from "./styles.module.scss"
+import styles from "./styles.module.scss";
 
 export default function Insurance() {
-
   return (
-    <div className={`${slideStyles.slide}`}>
-      <img src="/assets/insurance.png" width="100%" />
+    <div className={`${styles.slide} ${styles.insurance}`}>
+      <img
+        src="/assets/remote-roofing-logo-white.png"
+        alt="logo"
+        className={`${styles.insurance__logo} fade-in-top-down`}
+      />
+
+      <div style={{ margin: "100px 0 0 75px" }}>
+        <div style={{ marginBottom: "75px", width: "40%" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginBottom: "20px",
+              opacity: 0,
+              animationFillMode: "forwards",
+              animationDelay: ".7s",
+            }}
+            className="fade-in-top-down"
+          >
+            <img
+              src="/assets/rain-button.png"
+              width={70}
+              style={{ marginRight: "20px" }}
+            />
+            <h1 style={{ fontSize: "70px", fontStyle: "bolder", margin: 0 }}>
+              INSURANCE
+            </h1>
+          </div>
+          <p
+            style={{
+              margin: 0,
+              opacity: 0,
+              animationFillMode: "forwards",
+              animationDelay: ".9s",
+            }}
+            className="fade-in-top-down"
+          >
+            Based on cause and extent of damage on the roof, your insurance
+            carrier can cover the cost of replacement
+          </p>
+        </div>
+
+        <img
+          src="/assets/brands.png"
+          style={{
+            marginRight: "100px",
+            float: "left",
+            opacity: 0,
+            animationFillMode: "forwards",
+            animationDelay: "1.2s",
+          }}
+          className="fade-in-top-down"
+        />
+        <img
+          src="/assets/roof-scheme-with-rain.png"
+          style={{
+            marginTop: "-100px",
+            opacity: 0,
+            animationFillMode: "forwards",
+            animationDelay: "1.9s",
+          }}
+          className="fade-in-top-down"
+        />
+      </div>
     </div>
   );
 }
