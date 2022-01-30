@@ -2,14 +2,14 @@ import styles from "./styles.module.scss";
 
 export default function Insurance() {
   return (
-    <div className={`${styles.slide} ${styles.insurance}`}>
+    <div className={`${styles.slide} ${styles.dark}`}>
       <img
         src="/assets/remote-roofing-logo-white.png"
         alt="logo"
-        className={`${styles.insurance__logo} fade-in-top-down`}
+        className={`${styles.logo} fade-in-top-down`}
       />
 
-      <div style={{ margin: "100px 0 0 75px" }}>
+      <div className={styles.content}>
         <div style={{ marginBottom: "75px", width: "40%" }}>
           <div
             style={{
@@ -48,8 +48,8 @@ export default function Insurance() {
         <img
           src="/assets/brands.png"
           style={{
-            marginRight: "100px",
             float: "left",
+            marginRight: "100px",
             opacity: 0,
             animationFillMode: "forwards",
             animationDelay: "1.2s",
