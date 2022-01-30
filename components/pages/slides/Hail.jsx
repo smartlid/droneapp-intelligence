@@ -20,6 +20,7 @@ export default function Hail({ record }) {
       mousewheel={true}
       speed={1000}
       spaceBetween={0}
+      nested={true}
     >
       <SwiperSlide>
         <div className={`${styles.slide} ${styles.hail}`}>
