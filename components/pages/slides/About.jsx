@@ -1,6 +1,10 @@
+import { useEffect } from "react"
 import slideStyles from "./styles.module.scss"
 
-export default function About() {
+export default function About({ setPaginationClass }) {
+  useEffect(() => {
+    setPaginationClass('light');
+  }, [setPaginationClass])
 
   return (
     <div className={`${slideStyles.slide}`}>

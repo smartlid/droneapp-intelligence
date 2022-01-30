@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./styles.module.scss";
 
-export default function Hail({ record }) {
+export default function Hail({ record, setPaginationClass }) {
   const [hailImpacts, setHailImpacts] = useState([]);
 
   useEffect(() => {
@@ -12,6 +12,10 @@ export default function Hail({ record }) {
       console.log('Impacts: ', impacts)
     }
   }, [record]);
+
+  useEffect(() => {
+    setPaginationClass('dark');
+  }, [setPaginationClass])
 
   return (
     <Swiper

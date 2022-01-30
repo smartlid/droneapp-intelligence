@@ -1,6 +1,11 @@
+import { useEffect } from "react"
 import styles from "./styles.module.scss";
 
-export default function Storm({ record }) {
+export default function Storm({ setPaginationClass }) {
+  useEffect(() => {
+    setPaginationClass('dark');
+  }, [setPaginationClass])
+
   return (
     <div className={`${styles.slide} ${styles["slide-storm"]} ${styles.storm}`}>
       <img

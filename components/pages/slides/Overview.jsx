@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
-export default function Product({ record }) {
+export default function Product({ record, setPaginationClass }) {
   const [side, setSide] = useState("Front");
   const [address, setAddress] = useState("");
   const [frontview, setFrontview] = useState("");
@@ -17,6 +17,10 @@ export default function Product({ record }) {
       }
     }
   }, [record, side]);
+
+  useEffect(() => {
+    setPaginationClass('dark')
+  }, [setPaginationClass])
 
   const onChange = () => {
     if (side === "Front") setSide("Roof");

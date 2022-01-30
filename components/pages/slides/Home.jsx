@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import slideStyles from "./styles.module.scss"
 
-export default function Home({ record }) {
+export default function Home({ record, setPaginationClass }) {
   const [address, setAddress] = useState('');
 
   useEffect(() => {
@@ -9,6 +9,10 @@ export default function Home({ record }) {
       setAddress(record.fields['Property Address']);
     }
   }, [record])
+
+  useEffect(() => {
+    setPaginationClass('light');
+  }, [setPaginationClass])
 
   return (
     <div className={`${slideStyles.slide} ${slideStyles["slide-home"]} ${slideStyles["bg-light"]}`}>

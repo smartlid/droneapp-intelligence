@@ -76,20 +76,40 @@ a {
 .swiper-pagination-bullet {
   width: 18px !important;
   height: 18px !important;
-  opacity: 1;
   background: transparent !important;
-  border: 2px solid #202020;
   margin: 15px !important;
 }
 
-.swiper-pagination-bullet:hover {
+.light .swiper-pagination-bullet {
+  opacity: 1;
+  border: 2px solid #202020;
+}
+
+.light .swiper-pagination-bullet:hover {
   opacity: 1;
   background: #202020 !important;
 }
 
-.swiper-pagination-bullet-active {
+.light .swiper-pagination-bullet-active {
   background: #202020 !important;
 }
+
+.dark .swiper-pagination-bullet {
+  opacity: 1;
+  background: transparent !important;
+  border: 2px solid #e5e5e5;
+  margin: 15px !important;
+}
+
+.dark .swiper-pagination-bullet:hover {
+  opacity: 1;
+  background: #e5e5e5 !important;
+}
+
+.dark .swiper-pagination-bullet-active {
+  background: #e5e5e5 !important;
+}
+
 
 .fade-in-top-down {
   opacity: 0;

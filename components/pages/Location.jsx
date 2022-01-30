@@ -42,6 +42,22 @@ export default function Location() {
   const router = useRouter();
   const [record, setRecord] = useState();
 
+  const setPaginationClass = (className) => {
+    const els = document.getElementsByClassName('swiper-pagination');
+    if (els && els.length) {
+      const swiperPagination = els[0];
+      if (className === 'dark') {
+        swiperPagination.classList.remove('light');
+        swiperPagination.classList.add(className);
+      } else if (className === 'light') {
+        swiperPagination.classList.remove('dark')
+        swiperPagination.classList.add(className);
+      }
+    }
+
+    return;
+  }
+
   // Get airtable data
   useEffect(() => {
     const { id } = router.query;
@@ -76,61 +92,61 @@ console.log('After getting data: ', record)
       speed={1000}
     >
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Home record={record} />)}
+        {({ isActive }) => isActive && (<Home record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Product record={record} />)}
+        {({ isActive }) => isActive && (<Product record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Overview record={record} />)}
+        {({ isActive }) => isActive && (<Overview record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Storm record={record} />)}
+        {({ isActive }) => isActive && (<Storm record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Hail record={record} />)}
+        {({ isActive }) => isActive && (<Hail record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Insurance record={record} />)}
+        {({ isActive }) => isActive && (<Insurance record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<RoofIntelligence record={record} />)}
+        {({ isActive }) => isActive && (<RoofIntelligence record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<MoistureFirst record={record} />)}
+        {({ isActive }) => isActive && (<MoistureFirst record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<MoistureSecond record={record} />)}
+        {({ isActive }) => isActive && (<MoistureSecond record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<MoistureThird record={record} />)}
+        {({ isActive }) => isActive && (<MoistureThird record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<About record={record} />)}
+        {({ isActive }) => isActive && (<About record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Benefits record={record} />)}
+        {({ isActive }) => isActive && (<Benefits record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<PersonalExperience record={record} />)}
+        {({ isActive }) => isActive && (<PersonalExperience record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Testimonial record={record} />)}
+        {({ isActive }) => isActive && (<Testimonial record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<NextStepBase record={record} />)}
+        {({ isActive }) => isActive && (<NextStepBase record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<NextStepAnalysis record={record} />)}
+        {({ isActive }) => isActive && (<NextStepAnalysis record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<NextStepEstimate record={record} />)}
+        {({ isActive }) => isActive && (<NextStepEstimate record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<NextStepInstall record={record} />)}
+        {({ isActive }) => isActive && (<NextStepInstall record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<RoofCustomization record={record} />)}
+        {({ isActive }) => isActive && (<RoofCustomization record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
     </Swiper>
   );

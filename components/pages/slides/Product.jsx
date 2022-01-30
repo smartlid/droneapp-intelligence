@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import styles from "./styles.module.scss"
 
-export default function Product({ record }) {
+export default function Product({ setPaginationClass }) {
+  useEffect(() => {
+    setPaginationClass('light');
+  }, [setPaginationClass])
+
   return (
     <div className={`${styles.slide} ${styles["slide-product"]} ${styles.product}`}>
       <div className={styles.product__left}>

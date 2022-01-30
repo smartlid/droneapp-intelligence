@@ -1,6 +1,11 @@
+import { useEffect } from "react"
 import styles from "./styles.module.scss";
 
-export default function RoofIntelligence() {
+export default function RoofIntelligence({ setPaginationClass }) {
+  useEffect(() => {
+    setPaginationClass('light');
+  }, [setPaginationClass])
+
   return (
     <div
       className={`${styles.slide} ${styles["slide-roof"]} ${styles.roof}`}
