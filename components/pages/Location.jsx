@@ -12,9 +12,9 @@ import RoofIntelligence from "./slides/RoofIntelligence";
 import HailImpacts from "./slides/HailImpacts";
 import GranularDamage from "./slides/GranularDamage";
 import MetalDamage from "./slides/MetalDamage";
-import MoistureFirst from "./slides/MoistureFirst";
-import MoistureSecond from "./slides/MoistureSecond";
-import MoistureThird from "./slides/MoistureThird";
+import ExposureEvaporation from "./slides/ExposureEvaporation";
+import ExposureBuild from "./slides/ExposureBuild";
+import ExposureDecking from "./slides/ExposureDecking";
 import About from "./slides/About";
 import Benefits from "./slides/Benefits";
 import PersonalExperience from "./slides/PersonalExperience";
@@ -84,7 +84,6 @@ console.log('After getting data: ', record)
   return (
     <Swiper
       direction="vertical"
-      pagination={{ clickable: true }}
       effect="creative"
       creativeEffect={{
         prev: { shadow: true, translate: [0, 0, -400] },
@@ -125,13 +124,13 @@ console.log('After getting data: ', record)
         {({ isActive }) => isActive && (<MetalDamage record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<MoistureFirst record={record} setPaginationClass={setPaginationClass} />)}
+        {({ isActive }) => isActive && (<ExposureEvaporation record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<MoistureSecond record={record} setPaginationClass={setPaginationClass} />)}
+        {({ isActive }) => isActive && (<ExposureBuild record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<MoistureThird record={record} setPaginationClass={setPaginationClass} />)}
+        {({ isActive }) => isActive && (<ExposureDecking record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
         {({ isActive }) => isActive && (<About record={record} setPaginationClass={setPaginationClass} />)}
