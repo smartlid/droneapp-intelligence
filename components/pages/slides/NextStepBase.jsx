@@ -31,12 +31,12 @@ export default function NextStepBase() {
         </div>
 
         <div style={{ marginTop: "5%", display: "flex", justifyContent: "space-between" }}>
-          <div style={{ flex: "0 0 50%", padding: "0 0 0 10%" }}>
+          <div style={{ flex: "0 0 50%", padding: "0 0 0 5%", color: "#868686", fontWeight: "bolder" }}>
             <p className={styles.list}>Analysis Confirmation</p>
             <p className={styles.list}>Finalized Estimate</p>
             <p className={`${styles.list} ${styles.last}`}>Roof Installation</p>
           </div>
-          <div style={{ flex: "0 0 50%" }}>
+          <div style={{ flex: "0 0 50%", marginTop: "-50px" }}>
             <img src="/assets/map-model.png" style={{ width: "100%" }} />
           </div>
         </div>

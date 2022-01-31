@@ -674,5 +674,22 @@
     &.last::after {
       content: none;
     }
+
+    &.active {
+      font-size: 42px;
+      color: #000000;
+
+      &::before {
+        left: -74px;
+        background: #000000;
+        width: 30px;
+        height: 30px;
+      }
+
+      &::after {
+        top: calc(50% + 15px);
+        height: 210px;
+      }
+    }
   }
 }
