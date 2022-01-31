@@ -23,7 +23,7 @@ export default function PersonalExperience() {
             animationFillMode: "forwards",
             animationDelay: "1s",
             width: "60%",
-            padding: "20px",
+            paddingTop: "20px",
             border: "solid #505050",
             borderWidth: "0 0 1px 0",
           }}

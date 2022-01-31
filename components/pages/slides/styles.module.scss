@@ -640,3 +640,39 @@
     margin: 20px 0;
   }
 }
+
+.steps {
+  .list {
+    color: #d0d0d0;
+    font-size: 32px;
+    font-weight: bolder;
+    margin: 30px 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -70px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #d0d0d0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 70%;
+      left: -60px;
+      width: 0px;
+      height: 50px;
+      border: 0.5px dashed #d0d0d0;
+    }
+
+    &.last::after {
+      content: none;
+    }
+  }
+}
