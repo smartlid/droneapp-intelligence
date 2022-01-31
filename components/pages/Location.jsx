@@ -9,6 +9,7 @@ import Storm from "./slides/Storm";
 import Hail from "./slides/Hail";
 import Insurance from "./slides/Insurance";
 import RoofIntelligence from "./slides/RoofIntelligence";
+import HailImpacts from "./slides/HailImpacts";
 import MoistureFirst from "./slides/MoistureFirst";
 import MoistureSecond from "./slides/MoistureSecond";
 import MoistureThird from "./slides/MoistureThird";
@@ -111,6 +112,9 @@ console.log('After getting data: ', record)
       </SwiperSlide>
       <SwiperSlide>
         {({ isActive }) => isActive && (<RoofIntelligence record={record} setPaginationClass={setPaginationClass} />)}
+      </SwiperSlide>
+      <SwiperSlide>
+        {({ isActive }) => isActive && (<HailImpacts record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
         {({ isActive }) => isActive && (<MoistureFirst record={record} setPaginationClass={setPaginationClass} />)}

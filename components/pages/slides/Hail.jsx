@@ -1,18 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./styles.module.scss";
 
-export default function Hail({ record, setPaginationClass }) {
-  const [hailImpacts, setHailImpacts] = useState([]);
-
-  useEffect(() => {
-    if (record) {
-      const impacts = [record.fields["HI-1"][0].url, record.fields["HI-3"][0].url, record.fields["HI-3"][0].url];
-      setHailImpacts(impacts);
-      console.log('Impacts: ', impacts)
-    }
-  }, [record]);
-
+export default function Hail({ setPaginationClass }) {
   useEffect(() => {
     setPaginationClass('dark');
   }, [setPaginationClass])
@@ -169,7 +159,7 @@ export default function Hail({ record, setPaginationClass }) {
                 <img src="/assets/impact-detail.png" width="100%" style={{ borderRadius: "30px" }} />
               </div>
               <div style={{ flex: "0 0 50%", padding: "0 50px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                <h3 style={{ fontSize: "48px", fontStyle: "bolder", margin: 0 }}>HAIL IMPACTS</h3>
+              <h3 style={{ fontSize: "48px", fontStyle: "bolder", margin: 0 }}>HAIL IMPACTS</h3>
                 <p>Classified as indentations on the surface of the shingle as a causation of hail</p>
               </div>
             </div>

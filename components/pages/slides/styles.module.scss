@@ -75,6 +75,7 @@
 
 .content {
   margin: 100px 0 0 75px;
+  height: calc(100% - 100px);
 }
 
 .home {
@@ -354,4 +355,59 @@
 .roof {
   color: #fff;
   background: rgb(221,221,221);
+}
+
+.impacts {
+  &__title {
+    font-size: 24px;
+    font-style: bolder;
+    margin: 0;
+    position: relative;
+    color: #505050;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -45px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #505050;
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      left: -36px;
+      top: 50%;
+      border: 0.5px solid;
+      height: 20px;
+      border-color: #505050;
+    }
+
+    &.active {
+      font-size: 60px;
+      color: #fff;
+
+      &::before {
+        left: -50px;
+        background: #fff;
+        width: 30px;
+        height: 30px;
+      }
+
+      &::after {
+        top: calc(50% + 15px);
+        height: 110px;
+      }
+    }
+
+    &.last {
+      &::after {
+        content: none;
+      }
+    }
+  } 
 }
