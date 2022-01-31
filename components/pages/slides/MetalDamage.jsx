@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
 export default function MetalDamage({ record, setPaginationClass }) {
-  const [damage, setDamage] = useState('');
+  const [damage, setDamage] = useState("");
 
   useEffect(() => {
     if (record) {
@@ -33,11 +33,7 @@ export default function MetalDamage({ record, setPaginationClass }) {
           }}
         >
           <div style={{ flex: "0 0 35%" }}>
-            <img
-              src={damage}
-              width="100%"
-              style={{ borderRadius: "30px" }}
-            />
+            <img src={damage} width="100%" style={{ borderRadius: "30px" }} />
           </div>
           <div
             style={{
@@ -50,11 +46,11 @@ export default function MetalDamage({ record, setPaginationClass }) {
             }}
           >
             <div style={{ textAlign: "left" }}>
-              <div className={`${styles.impacts__title}`}>
-                Hail Impacts
-              </div>
+              <div className={`${styles.impacts__title}`}>Hail Impacts</div>
               <div className={`${styles.impacts__title}`}>Granular Damage</div>
-              <div className={`${styles.impacts__title} ${styles.last} ${styles.active}`}>
+              <div
+                className={`${styles.impacts__title} ${styles.last} ${styles.active}`}
+              >
                 Soft Metal Damage
               </div>
             </div>

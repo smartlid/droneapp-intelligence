@@ -1,15 +1,13 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 import styles from "./styles.module.scss";
 
 export default function RoofIntelligence({ setPaginationClass }) {
   useEffect(() => {
-    setPaginationClass('light');
-  }, [setPaginationClass])
+    setPaginationClass("light");
+  }, [setPaginationClass]);
 
   return (
-    <div
-      className={`${styles.slide} ${styles["slide-roof"]} ${styles.roof}`}
-    >
+    <div className={`${styles.slide} ${styles["slide-roof"]} ${styles.roof}`}>
       <img
         src="/assets/remote-roofing-logo-white.png"
         alt="logo"
@@ -42,11 +40,15 @@ export default function RoofIntelligence({ setPaginationClass }) {
           {`A complete breakdown of your roof’s health`}
         </p>
 
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "120px" }}>
-          <img
-            src="/assets/map-model.png"
-            width="60%"
-          />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "120px",
+          }}
+        >
+          <img src="/assets/map-model.png" width="60%" />
         </div>
       </div>
     </div>

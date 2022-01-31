@@ -49,14 +49,28 @@ export default function Benefits() {
                 zIndex: 1,
               }}
             />
-            <div style={{ position: "absolute", top: "50%", left: "25%", transform: "translateY(-50%)" }}>
+            <div
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "25%",
+                transform: "translateY(-50%)",
+              }}
+            >
               <p className={styles.list}>Transparent</p>
               <p className={styles.list}>DFW-based</p>
               <p className={`${styles.list} ${styles.last}`}>A+Ratings</p>
             </div>
           </div>
           <div className={styles["benefits__right-circle"]}>
-            <div style={{ position: "absolute", top: "50%", right: "25%", transform: "translateY(-50%)" }}>
+            <div
+              style={{
+                position: "absolute",
+                top: "50%",
+                right: "25%",
+                transform: "translateY(-50%)",
+              }}
+            >
               <p className={styles["list"]}>AI Powered</p>
               <p className={styles["list"]}>360° Analysis</p>
               <p className={`${styles["list"]} ${styles.last}`}>Custom Roof</p>

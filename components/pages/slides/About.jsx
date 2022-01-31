@@ -10,8 +10,14 @@ export default function About() {
         alt="logo"
         className={`${styles.logo} fade-in-top-down`}
       />
-      <img src="/assets/drone1.png" style={{ position: "absolute", left: "18%", top: "35%" }} />
-      <img src="/assets/drone2.png" style={{ position: "absolute", right: "25%", top: "45%" }} />
+      <img
+        src="/assets/drone1.png"
+        style={{ position: "absolute", left: "18%", top: "35%" }}
+      />
+      <img
+        src="/assets/drone2.png"
+        style={{ position: "absolute", right: "25%", top: "45%" }}
+      />
 
       <div className={styles.content}>
         <div style={{ textAlign: "center", marginTop: "10%" }}>
@@ -42,10 +48,7 @@ export default function About() {
             ROOFING
           </h1>
         </div>
-        <img
-          src="/assets/map.png"
-          style={{ margin: "5% auto"}}
-        />
+        <img src="/assets/map.png" style={{ margin: "5% auto" }} />
       </div>
     </div>
   );

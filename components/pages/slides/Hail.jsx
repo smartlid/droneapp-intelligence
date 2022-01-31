@@ -4,8 +4,8 @@ import styles from "./styles.module.scss";
 
 export default function Hail({ setPaginationClass }) {
   useEffect(() => {
-    setPaginationClass('dark');
-  }, [setPaginationClass])
+    setPaginationClass("dark");
+  }, [setPaginationClass]);
 
   return (
     <Swiper
@@ -53,9 +53,12 @@ export default function Hail({ setPaginationClass }) {
               </div>
             </div>
             <div style={{ flex: "1 0" }}>
-              <h1 className={`${styles.hail__title} fade-in-top-down`}>DFW HAIL</h1>
+              <h1 className={`${styles.hail__title} fade-in-top-down`}>
+                DFW HAIL
+              </h1>
               <p className={`${styles.hail__description} fade-in-top-down`}>
-                {"The DFW metroplex is in the heart of the nation's hail alley"}.
+                {"The DFW metroplex is in the heart of the nation's hail alley"}
+                .
               </p>
 
               <div style={{ padding: "20px 0" }}>
@@ -125,7 +128,10 @@ export default function Hail({ setPaginationClass }) {
                     </div>
                   </div>
                   <div style={{ flex: "0 0" }}>
-                    <img src="assets/cloud.png" style={{ marginTop: "-70px" }} />
+                    <img
+                      src="assets/cloud.png"
+                      style={{ marginTop: "-70px" }}
+                    />
                     <img
                       src="assets/roof-scheme.png"
                       style={{ margin: "80px 0 0 -50px", width: "100%" }}
@@ -147,20 +153,42 @@ export default function Hail({ setPaginationClass }) {
                 border: "0.5px dashed #E5E5E5",
               }}
             ></div>
-            <div style={{
-              flex: "1 0",
-              padding: "20px 0",
-              display: "flex",
-              flexWrap: "nowrap",
-              justifyContent: "space-between",
-              alignItems: "center"
-            }}>
+            <div
+              style={{
+                flex: "1 0",
+                padding: "20px 0",
+                display: "flex",
+                flexWrap: "nowrap",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
               <div style={{ flex: "0 0 50%", padding: "0 50px" }}>
-                <img src="/assets/impact-detail.png" width="100%" style={{ borderRadius: "30px" }} />
+                <img
+                  src="/assets/impact-detail.png"
+                  width="100%"
+                  style={{ borderRadius: "30px" }}
+                />
               </div>
-              <div style={{ flex: "0 0 50%", padding: "0 50px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-              <h3 style={{ fontSize: "48px", fontStyle: "bolder", margin: 0 }}>HAIL IMPACTS</h3>
-                <p>Classified as indentations on the surface of the shingle as a causation of hail</p>
+              <div
+                style={{
+                  flex: "0 0 50%",
+                  padding: "0 50px",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <h3
+                  style={{ fontSize: "48px", fontStyle: "bolder", margin: 0 }}
+                >
+                  HAIL IMPACTS
+                </h3>
+                <p>
+                  Classified as indentations on the surface of the shingle as a
+                  causation of hail
+                </p>
               </div>
             </div>
           </div>

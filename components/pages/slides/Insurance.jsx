@@ -1,10 +1,10 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 import styles from "./styles.module.scss";
 
 export default function Insurance({ setPaginationClass }) {
   useEffect(() => {
-    setPaginationClass('dark');
-  }, [setPaginationClass])
+    setPaginationClass("dark");
+  }, [setPaginationClass]);
 
   return (
     <div className={`${styles.slide} ${styles.dark}`}>

@@ -78,7 +78,8 @@ export default function Location() {
           console.error(err);
           return;
         }
-console.log('After getting data: ', record)
+        
+        console.log('After getting data: ', record)
         setRecord(record);
       });
     }

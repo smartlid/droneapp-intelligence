@@ -4,14 +4,14 @@ import styles from "./styles.module.scss";
 
 export default function Hail({ record, setPaginationClass }) {
   const [impactCount, setImpactCount] = useState(0);
-  const [address, setAddress] = useState('');
-  const [roof, setRoof] = useState('');
+  const [address, setAddress] = useState("");
+  const [roof, setRoof] = useState("");
 
   useEffect(() => {
     if (record) {
       setImpactCount(record.fields["# of Hail Impacts"]);
-      setAddress(record.fields['Property Address']);
-      setRoof(record.fields['Moisture Exposure'][0]['url']);
+      setAddress(record.fields["Property Address"]);
+      setRoof(record.fields["Moisture Exposure"][0]["url"]);
     }
   }, [record]);
 
@@ -32,11 +32,19 @@ export default function Hail({ record, setPaginationClass }) {
           right: "10%",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
-        <img src="/assets/remote-roofing-logo-white.png" width={180} height={120} style={{ marginRight: "30px" }} />
-        <h1 className="fade-in-top-down" style={{ fontSize: "70px", fontStyle: "bolder", margin: 0 }}>
+        <img
+          src="/assets/remote-roofing-logo-white.png"
+          width={180}
+          height={120}
+          style={{ marginRight: "30px" }}
+        />
+        <h1
+          className="fade-in-top-down"
+          style={{ fontSize: "70px", fontStyle: "bolder", margin: 0 }}
+        >
           Roof Intelligence
         </h1>
       </div>
@@ -77,7 +85,14 @@ export default function Hail({ record, setPaginationClass }) {
           display: "flex",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", flexDirection: "column", marginRight: "20px" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            marginRight: "20px",
+          }}
+        >
           <img src="/assets/roof.png" />
           <img src="/assets/metal.png" />
         </div>
@@ -87,9 +102,34 @@ export default function Hail({ record, setPaginationClass }) {
         </div>
       </div>
 
-      <img src="/assets/grid-pattern.png" style={{ position: "absolute", bottom: 0, left: "50%", transform: "translate(-50%, 40%)" }} />
-      <img src="/assets/map-model.png" style={{ position: "absolute", bottom: "2%", left: "50%", transform: "translate(-50%)" }} />
-      <p style={{ position: "absolute", bottom: "15px", left: "50%", transform: "translate(-50%)" }}>{address}</p>
+      <img
+        src="/assets/grid-pattern.png"
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: "50%",
+          transform: "translate(-50%, 40%)",
+        }}
+      />
+      <img
+        src="/assets/map-model.png"
+        style={{
+          position: "absolute",
+          bottom: "2%",
+          left: "50%",
+          transform: "translate(-50%)",
+        }}
+      />
+      <p
+        style={{
+          position: "absolute",
+          bottom: "15px",
+          left: "50%",
+          transform: "translate(-50%)",
+        }}
+      >
+        {address}
+      </p>
     </div>
   );
 }

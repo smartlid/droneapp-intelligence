@@ -20,7 +20,14 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
           />
 
           <div className={styles.content} style={{ textAlign: "right" }}>
-            <h1 className="fade-in-top-down" style={{ fontSize: "70px", fontStyle: "bolder", margin: "0 0 10px" }}>
+            <h1
+              className="fade-in-top-down"
+              style={{
+                fontSize: "70px",
+                fontStyle: "bolder",
+                margin: "0 0 10px",
+              }}
+            >
               Moisture Exposure
             </h1>
             <p className="fade-in-top-down">
@@ -46,11 +53,11 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
                 }}
               >
                 <div>
-                  <div className={`${styles.exposure__title}`}>
-                    Evaporation
-                  </div>
+                  <div className={`${styles.exposure__title}`}>Evaporation</div>
                   <div className={`${styles.exposure__title}`}>Build up</div>
-                  <div className={`${styles.exposure__title} ${styles.last} ${styles.active}`}>
+                  <div
+                    className={`${styles.exposure__title} ${styles.last} ${styles.active}`}
+                  >
                     Decking
                   </div>
                 </div>
@@ -66,22 +73,44 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
         >
           <div className={styles.content} style={{ display: "flex" }}>
             <div style={{ flex: "0 0 50%", paddingRight: "5%" }}>
-              <h1 className="fade-in-top-down" style={{ fontSize: "70px", fontStyle: "bolder", margin: "0 0 10px" }}>
+              <h1
+                className="fade-in-top-down"
+                style={{
+                  fontSize: "70px",
+                  fontStyle: "bolder",
+                  margin: "0 0 10px",
+                }}
+              >
                 Thermal Scan
               </h1>
               <p className="fade-in-top-down">
-                A thermal depth-vision scan of the roof to detect risks for moisture exposure.
+                A thermal depth-vision scan of the roof to detect risks for
+                moisture exposure.
               </p>
-              <img src="/assets/scan-level.png" style={{ marginTop: "150px" }} />
+              <img
+                src="/assets/scan-level.png"
+                style={{ marginTop: "150px" }}
+              />
             </div>
 
-              <div style={{ paddingLeft: "5%" }}>
-                <img src="/assets/healthy-roof.png" width={450} style={{ borderRadius: "30px" }} />
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: "50px" }}>
-                  <h3>HEALTHY ROOF</h3>
-                  <h3>MY ROOF</h3>
-                </div>
+            <div style={{ paddingLeft: "5%" }}>
+              <img
+                src="/assets/healthy-roof.png"
+                width={450}
+                style={{ borderRadius: "30px" }}
+              />
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  paddingTop: "50px",
+                }}
+              >
+                <h3>HEALTHY ROOF</h3>
+                <h3>MY ROOF</h3>
               </div>
+            </div>
           </div>
         </div>
       </SwiperSlide>

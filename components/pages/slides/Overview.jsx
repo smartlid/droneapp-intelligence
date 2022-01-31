@@ -19,8 +19,8 @@ export default function Product({ record, setPaginationClass }) {
   }, [record, side]);
 
   useEffect(() => {
-    setPaginationClass('dark')
-  }, [setPaginationClass])
+    setPaginationClass("dark");
+  }, [setPaginationClass]);
 
   const onChange = () => {
     if (side === "Front") setSide("Roof");

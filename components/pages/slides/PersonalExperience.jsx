@@ -28,33 +28,71 @@ export default function PersonalExperience() {
             borderWidth: "0 0 1px 0",
           }}
         >
-          <h1 style={{ margin: 0, fontSize: "70px", fontWeight: "bolder", color: "#075BBD" }}>
+          <h1
+            style={{
+              margin: 0,
+              fontSize: "70px",
+              fontWeight: "bolder",
+              color: "#075BBD",
+            }}
+          >
             Personalized
           </h1>
           <div style={{ display: "flex", alignItems: "end" }}>
-            <h1 style={{ margin: "0 20px 0 0", fontSize: "70px", fontWeight: "bolder" }}>
-              experience 
+            <h1
+              style={{
+                margin: "0 20px 0 0",
+                fontSize: "70px",
+                fontWeight: "bolder",
+              }}
+            >
+              experience
             </h1>
-            <h3 style={{ margin: "0 0 7px 0", fontSize: "36px", fontWeight: "bolder", color: "#505050" }}>(from start to finish)</h3>
+            <h3
+              style={{
+                margin: "0 0 7px 0",
+                fontSize: "36px",
+                fontWeight: "bolder",
+                color: "#505050",
+              }}
+            >
+              (from start to finish)
+            </h3>
           </div>
         </div>
 
         <div className={styles["experience__item-container"]}>
           <div className={styles.experience__item}>
-            <img src="/assets/chat.png" className={styles["experience__item-icon"]} />
+            <img
+              src="/assets/chat.png"
+              className={styles["experience__item-icon"]}
+            />
             <p className={styles["experience__item-text"]}>TEXT UPDATES</p>
           </div>
           <div className={styles.experience__item}>
-            <img src="/assets/book.png" className={styles["experience__item-icon"]} />
-            <p className={styles["experience__item-text"]}>REGULAR ROOF HEALTH CHECKS</p>
+            <img
+              src="/assets/book.png"
+              className={styles["experience__item-icon"]}
+            />
+            <p className={styles["experience__item-text"]}>
+              REGULAR ROOF HEALTH CHECKS
+            </p>
           </div>
           <div className={styles.experience__item}>
-            <img src="/assets/roof-item.png" className={styles["experience__item-icon"]} />
+            <img
+              src="/assets/roof-item.png"
+              className={styles["experience__item-icon"]}
+            />
             <p className={styles["experience__item-text"]}>CUSTOM ROOF</p>
           </div>
           <div className={styles.experience__item}>
-            <img src="/assets/person.png" className={styles["experience__item-icon"]} />
-            <p className={styles["experience__item-text"]}>DEDICATED ROOF GENIUS</p>
+            <img
+              src="/assets/person.png"
+              className={styles["experience__item-icon"]}
+            />
+            <p className={styles["experience__item-text"]}>
+              DEDICATED ROOF GENIUS
+            </p>
           </div>
         </div>
       </div>

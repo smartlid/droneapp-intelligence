@@ -10,7 +10,7 @@
   position: absolute;
   width: 10px;
   height: 25%;
-  background: linear-gradient(135.11deg, #0A8EDE 3.78%, #075BBD 94.58%); 
+  background: linear-gradient(135.11deg, #0a8ede 3.78%, #075bbd 94.58%);
 }
 
 .slide-home::before {
@@ -18,7 +18,7 @@
   position: absolute;
   width: 10px;
   height: 6%;
-  background: linear-gradient(135.11deg, #0A8EDE 3.78%, #075BBD 94.58%);
+  background: linear-gradient(135.11deg, #0a8ede 3.78%, #075bbd 94.58%);
 }
 
 .slide-product::before {
@@ -26,7 +26,7 @@
   position: absolute;
   width: 10px;
   height: 25%;
-  background: linear-gradient(135.11deg, #0A8EDE 3.78%, #075BBD 94.58%); 
+  background: linear-gradient(135.11deg, #0a8ede 3.78%, #075bbd 94.58%);
 }
 
 .slide-about::before {
@@ -37,7 +37,8 @@
   content: none;
 }
 
-.slide-overview::after, .slide-roof::after {
+.slide-overview::after,
+.slide-roof::after {
   content: "";
   position: absolute;
   left: 0;
@@ -53,11 +54,15 @@
 }
 
 .slide-roof::after {
-  background: linear-gradient(180deg, #000000 39.58%, rgba(221, 221, 221, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    #000000 39.58%,
+    rgba(221, 221, 221, 0) 100%
+  );
 }
 
 .bg-light {
-  background-image: linear-gradient(#075BBD1A, #C4C4C400);
+  background-image: linear-gradient(#075bbd1a, #c4c4c400);
 }
 
 .dark {
@@ -74,7 +79,7 @@
 
   opacity: 0;
   animation-fill-mode: forwards;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 .content {
@@ -90,7 +95,7 @@
 
     opacity: 0;
     animation-fill-mode: forwards;
-    animation-delay: .5s;
+    animation-delay: 0.5s;
   }
 
   &__title {
@@ -100,7 +105,7 @@
     line-height: 100%;
     text-align: left;
 
-    animation-delay: .7s;
+    animation-delay: 0.7s;
   }
 
   &__address {
@@ -112,14 +117,14 @@
     color: #868686;
     min-height: 47px;
 
-    animation-delay: .9s;
+    animation-delay: 0.9s;
   }
 
   &__map-area {
     position: relative;
     width: 50%;
     margin: 60px auto 0;
-    animation-delay: .9s;
+    animation-delay: 0.9s;
   }
 
   &__drone {
@@ -147,7 +152,7 @@
 
     opacity: 0;
     animation-fill-mode: forwards;
-    animation-delay: .5s;
+    animation-delay: 0.5s;
   }
 
   &__left {
@@ -187,9 +192,9 @@
 
   &__description {
     font-size: 24px;
-    color: #8B8B8B;
+    color: #8b8b8b;
     animation-delay: 1.2s;
-  } 
+  }
 
   &__roof-scheme-area {
     position: relative;
@@ -206,7 +211,7 @@
     width: 100px;
     height: 40px;
 
-    animation-delay: .8s;
+    animation-delay: 0.8s;
   }
 
   .list {
@@ -227,7 +232,7 @@
       border-radius: 50%;
       background: #c5c5c5;
     }
-    
+
     &::after {
       content: "";
       position: absolute;
@@ -275,7 +280,7 @@
 
     opacity: 0;
     animation-fill-mode: forwards;
-    animation-delay: .5s;
+    animation-delay: 0.5s;
   }
 
   &__title {
@@ -285,7 +290,7 @@
     line-height: 100%;
     text-align: left;
 
-    animation-delay: .7s;
+    animation-delay: 0.7s;
   }
 
   &__address {
@@ -295,9 +300,9 @@
     font-size: 30px;
     line-height: 47px;
     min-height: 47px;
-    color: #E5E5E5;
+    color: #e5e5e5;
 
-    animation-delay: .9s;
+    animation-delay: 0.9s;
   }
 }
 
@@ -322,7 +327,7 @@
 
     opacity: 0;
     animation-fill-mode: forwards;
-    animation-delay: .5s;
+    animation-delay: 0.5s;
   }
 
   &__title {
@@ -332,7 +337,7 @@
     line-height: 100%;
     text-align: left;
 
-    animation-delay: .7s;
+    animation-delay: 0.7s;
   }
 
   &__description {
@@ -341,13 +346,13 @@
     line-height: 100%;
     text-align: left;
 
-    animation-delay: .9s;
+    animation-delay: 0.9s;
   }
 
   &__map-area {
     position: relative;
     padding: 20px 10px;
-    animation-delay: .9s;
+    animation-delay: 0.9s;
     height: 550px;
   }
 }
@@ -379,7 +384,7 @@
 
     opacity: 0;
     animation-fill-mode: forwards;
-    animation-delay: .5s;
+    animation-delay: 0.5s;
   }
 
   &__title {
@@ -389,7 +394,7 @@
     line-height: 100%;
     text-align: left;
 
-    animation-delay: .7s;
+    animation-delay: 0.7s;
   }
 
   &__description {
@@ -398,20 +403,20 @@
     line-height: 100%;
     text-align: left;
 
-    animation-delay: .9s;
+    animation-delay: 0.9s;
   }
 
   &__map-area {
     position: relative;
     padding: 20px 10px;
-    animation-delay: .9s;
+    animation-delay: 0.9s;
     height: 550px;
   }
 }
 
 .roof {
   color: #fff;
-  background: rgb(221,221,221);
+  background: rgb(221, 221, 221);
 }
 
 .impacts {
@@ -433,7 +438,7 @@
       border-radius: 50%;
       background: #505050;
     }
-    
+
     &::after {
       content: "";
       position: absolute;
@@ -466,7 +471,7 @@
         content: none;
       }
     }
-  } 
+  }
 }
 
 .exposure {
@@ -488,7 +493,7 @@
       border-radius: 50%;
       background: #505050;
     }
-    
+
     &::after {
       content: "";
       position: absolute;
@@ -526,7 +531,7 @@
 .benefits {
   &__left-circle {
     position: relative;
-    border: 1px dashed #075BBD;
+    border: 1px dashed #075bbd;
     left: 20%;
     width: 24%;
     padding-bottom: 24%;
@@ -540,13 +545,13 @@
       left: 75%;
       width: 100%;
       height: 100%;
-      background: #075BBD;
+      background: #075bbd;
       border-radius: 100%;
     }
 
     .list {
       position: relative;
-      color: #075BBD;
+      color: #075bbd;
       font-weight: bold;
 
       &::before {
@@ -558,7 +563,7 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background: #075BBD;
+        background: #075bbd;
       }
 
       &::after {
@@ -568,7 +573,7 @@
         left: -16px;
         width: 0px;
         height: 30px;
-        border: 0.5px solid #075BBD;
+        border: 0.5px solid #075bbd;
       }
 
       &.last::after {

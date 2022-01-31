@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
 export default function GranularDamage({ record, setPaginationClass }) {
-  const [damage, setDamage] = useState('');
+  const [damage, setDamage] = useState("");
 
   useEffect(() => {
     if (record) {
@@ -33,11 +33,7 @@ export default function GranularDamage({ record, setPaginationClass }) {
           }}
         >
           <div style={{ flex: "0 0 35%" }}>
-            <img
-              src={damage}
-              width="100%"
-              style={{ borderRadius: "30px" }}
-            />
+            <img src={damage} width="100%" style={{ borderRadius: "30px" }} />
           </div>
           <div
             style={{
@@ -50,10 +46,13 @@ export default function GranularDamage({ record, setPaginationClass }) {
             }}
           >
             <div style={{ textAlign: "left" }}>
-              <div className={`${styles.impacts__title}`}>
-                Hail Impacts
+              <div className={`${styles.impacts__title}`}>Hail Impacts</div>
+              <div
+                className={`${styles.impacts__title} ${styles.active}`}
+                style={{ marginBottom: "100px" }}
+              >
+                Granular Damage
               </div>
-              <div className={`${styles.impacts__title} ${styles.active}`} style={{ marginBottom: "100px" }}>Granular Damage</div>
               <div className={`${styles.impacts__title} ${styles.last}`}>
                 Soft Metal Damage
               </div>

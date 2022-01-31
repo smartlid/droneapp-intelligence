@@ -10,7 +10,10 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
       />
 
       <div className={styles.content} style={{ textAlign: "right" }}>
-        <h1 className="fade-in-top-down" style={{ fontSize: "70px", fontStyle: "bolder", margin: "0 0 10px" }}>
+        <h1
+          className="fade-in-top-down"
+          style={{ fontSize: "70px", fontStyle: "bolder", margin: "0 0 10px" }}
+        >
           Moisture Exposure
         </h1>
         <p className="fade-in-top-down">
@@ -36,10 +39,10 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
             }}
           >
             <div>
-              <div className={`${styles.exposure__title}`}>
-                Evaporation
+              <div className={`${styles.exposure__title}`}>Evaporation</div>
+              <div className={`${styles.exposure__title} ${styles.active}`}>
+                Build up
               </div>
-              <div className={`${styles.exposure__title} ${styles.active}`}>Build up</div>
               <div className={`${styles.exposure__title} ${styles.last}`}>
                 Decking
               </div>

@@ -6,7 +6,7 @@ export default function Hail({ record, setPaginationClass }) {
   const [index, setIndex] = useState(0);
   const [hailImpacts, setHailImpacts] = useState([]);
   const [impactCount, setImpactCount] = useState(0);
-  const [address, setAddress] = useState('');
+  const [address, setAddress] = useState("");
 
   const onClickImage = () => {
     console.log(index);
@@ -22,7 +22,7 @@ export default function Hail({ record, setPaginationClass }) {
       ];
       setHailImpacts(impacts);
       setImpactCount(record.fields["# of Hail Impacts"]);
-      setAddress(record.fields['Property Address']);
+      setAddress(record.fields["Property Address"]);
     }
   }, [record]);
 
@@ -131,7 +131,9 @@ export default function Hail({ record, setPaginationClass }) {
             }}
           >
             <img src="/assets/cloud-rain.png" width={100} />
-            <h1 style={{ fontSize: "70px", margin: "0 20px 0" }}>{impactCount}</h1>
+            <h1 style={{ fontSize: "70px", margin: "0 20px 0" }}>
+              {impactCount}
+            </h1>
             <p style={{ width: "100px" }}>Hail Impact Detections</p>
           </div>
 
@@ -143,7 +145,14 @@ export default function Hail({ record, setPaginationClass }) {
               display: "flex",
             }}
           >
-            <div style={{ display: "flex", alignItems: "center", flexDirection: "column", marginRight: "20px" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                flexDirection: "column",
+                marginRight: "20px",
+              }}
+            >
               <img src="/assets/roof.png" />
               <img src="/assets/metal.png" />
             </div>
@@ -153,9 +162,34 @@ export default function Hail({ record, setPaginationClass }) {
             </div>
           </div>
 
-          <img src="/assets/grid-pattern.png" style={{ position: "absolute", bottom: 0, left: "50%", transform: "translate(-50%, 40%)" }} />
-          <img src="/assets/map-model.png" style={{ position: "absolute", bottom: "2%", left: "50%", transform: "translate(-50%)" }} />
-          <p style={{ position: "absolute", bottom: "15px", left: "50%", transform: "translate(-50%)" }}>{address}</p>
+          <img
+            src="/assets/grid-pattern.png"
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: "50%",
+              transform: "translate(-50%, 40%)",
+            }}
+          />
+          <img
+            src="/assets/map-model.png"
+            style={{
+              position: "absolute",
+              bottom: "2%",
+              left: "50%",
+              transform: "translate(-50%)",
+            }}
+          />
+          <p
+            style={{
+              position: "absolute",
+              bottom: "15px",
+              left: "50%",
+              transform: "translate(-50%)",
+            }}
+          >
+            {address}
+          </p>
         </div>
       </SwiperSlide>
     </Swiper>
