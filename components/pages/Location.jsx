@@ -15,6 +15,7 @@ import MetalDamage from "./slides/MetalDamage";
 import ExposureEvaporation from "./slides/ExposureEvaporation";
 import ExposureBuild from "./slides/ExposureBuild";
 import ExposureDecking from "./slides/ExposureDecking";
+import RoofIntelligenceResult from "./slides/RoofIntelligenceResult";
 import About from "./slides/About";
 import Benefits from "./slides/Benefits";
 import PersonalExperience from "./slides/PersonalExperience";
@@ -131,6 +132,9 @@ console.log('After getting data: ', record)
       </SwiperSlide>
       <SwiperSlide>
         {({ isActive }) => isActive && (<ExposureDecking record={record} setPaginationClass={setPaginationClass} />)}
+      </SwiperSlide>
+      <SwiperSlide>
+        {({ isActive }) => isActive && (<RoofIntelligenceResult record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
         {({ isActive }) => isActive && (<About record={record} setPaginationClass={setPaginationClass} />)}
