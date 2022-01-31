@@ -44,7 +44,7 @@ export default function Testimonial() {
             style={{
               position: "absolute",
               right: "-50px",
-              transform: "translate(100%, -20%)",
+              transform: "translate(100%, -50%)",
             }}
           >
             <img
