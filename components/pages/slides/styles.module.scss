@@ -599,3 +599,44 @@
     }
   }
 }
+
+.testimonial {
+  &__buttons {
+    float: right;
+    display: flex;
+    width: 20%;
+  }
+
+  &__button {
+    width: 200px;
+    height: 80px;
+  }
+
+  &__item-container {
+    margin-top: 3%;
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10%;
+  }
+
+  &__item {
+    background: #f8f8f8;
+    box-shadow: 0px 4px 50px 25px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    border-radius: 20px;
+    height: 100%;
+  }
+
+  &__name {
+    color: #757575;
+    font-size: 36px;
+    margin: 0;
+  }
+
+  &__rating {
+    display: flex;
+    margin: 20px 0;
+  }
+}

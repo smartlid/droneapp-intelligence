@@ -32,7 +32,7 @@ export default function PersonalExperience() {
             Personalized
           </h1>
           <div style={{ display: "flex", alignItems: "end" }}>
-            <h1 style={{ margin: 0, fontSize: "70px", fontWeight: "bolder" }}>
+            <h1 style={{ margin: "0 20px 0 0", fontSize: "70px", fontWeight: "bolder" }}>
               experience 
             </h1>
             <h3 style={{ margin: "0 0 7px 0", fontSize: "36px", fontWeight: "bolder", color: "#505050" }}>(from start to finish)</h3>
