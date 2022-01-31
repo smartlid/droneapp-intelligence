@@ -14,7 +14,7 @@ export default function Insurance({ setPaginationClass }) {
         className={`${styles.logo} fade-in-top-down`}
       />
 
-      <div className={styles.content}>
+      <div className={styles.content} style={{ marginRight: 0 }}>
         <div style={{ marginBottom: "75px", width: "40%" }}>
           <div
             style={{
