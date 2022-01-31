@@ -94,7 +94,7 @@ console.log('After getting data: ', record)
       mousewheel={true}
       speed={1000}
     >
-      {/* <SwiperSlide>
+      <SwiperSlide>
         {({ isActive }) => isActive && (<Home record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
@@ -135,7 +135,7 @@ console.log('After getting data: ', record)
       </SwiperSlide>
       <SwiperSlide>
         {({ isActive }) => isActive && (<RoofIntelligenceResult record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide> */}
+      </SwiperSlide>
       <SwiperSlide>
         {({ isActive }) => isActive && (<About record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
