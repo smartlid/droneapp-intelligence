@@ -21,7 +21,7 @@ export default function Home({ record, setPaginationClass }) {
       <h3 className={`${slideStyles.home__address} fade-in-top-down`}>{address}</h3>
 
       <div className={`${slideStyles["home__map-area"]} fade-in-top-down`}>
-        Map 3D Model Here
+        <img src="/assets/map.png" width="80%" style={{ margin: "0 auto" }} />
         <img src="/assets/drone.png" alt="drone" className={`${slideStyles.home__drone} fade-in-top-down`} />
       </div>
     </div>

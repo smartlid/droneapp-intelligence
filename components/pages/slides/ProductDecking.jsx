@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import styles from "./styles.module.scss"
 
-export default function Product({ setPaginationClass }) {
+export default function ProductDecking({ setPaginationClass }) {
   useEffect(() => {
     setPaginationClass('light');
   }, [setPaginationClass])
@@ -12,10 +12,14 @@ export default function Product({ setPaginationClass }) {
         <img src="/assets/remote-roofing-logo.png" alt="logo" className={`${styles.product__logo} fade-in-top-down`} />
         <div className={styles["product__roof-scheme-area"]}>
           <img src="/assets/drone.png" alt="drone" className={`${styles.product__drone} fade-in-top-down`} />
-          <div style={{ flex: "0 0 35%" }}>
-            Steps Here
+          <div style={{ flex: "0 0 35%", paddingTop: "10%" }}>
+            <p className={`${styles.list}`}>Shingle Analysis</p>
+            <p className={`${styles.list}`}>Underlayment Analysis</p>
+            <p className={`${styles.list} ${styles.last} ${styles.active}`}>Decking Analysis</p>
+            </div>
+          <div style={{ flex: "0 0 65%" }}>
+            <img src="/assets/product3.png" />
           </div>
-          <div style={{ flex: "0 0 65%" }}>Roof Scheme 3D Model Here</div>
         </div>
       </div>
       <div className={styles.product__right}>

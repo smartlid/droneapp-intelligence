@@ -3,7 +3,9 @@ import { useRouter } from "next/router";
 import Airtable from "airtable";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Home from "./slides/Home";
-import Product from "./slides/Product";
+import ProductShingle from "./slides/ProductShingle";
+import ProductUnderlayment from "./slides/ProductUnderlayment";
+import ProductDecking from "./slides/ProductDecking";
 import Overview from "./slides/Overview";
 import Storm from "./slides/Storm";
 import Hail from "./slides/Hail";
@@ -98,7 +100,13 @@ console.log('After getting data: ', record)
         {({ isActive }) => isActive && (<Home record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Product record={record} setPaginationClass={setPaginationClass} />)}
+        {({ isActive }) => isActive && (<ProductShingle record={record} setPaginationClass={setPaginationClass} />)}
+      </SwiperSlide>
+      <SwiperSlide>
+        {({ isActive }) => isActive && (<ProductUnderlayment record={record} setPaginationClass={setPaginationClass} />)}
+      </SwiperSlide>
+      <SwiperSlide>
+        {({ isActive }) => isActive && (<ProductDecking record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
         {({ isActive }) => isActive && (<Overview record={record} setPaginationClass={setPaginationClass} />)}
