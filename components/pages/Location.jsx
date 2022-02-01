@@ -110,79 +110,79 @@ export default function Location() {
       speed={1000}
     >
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Home record={record} setPaginationClass={setPaginationClass} />)}
+        {(<Home record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<ProductShingle record={record} setPaginationClass={setPaginationClass} />)}
+        {(<ProductShingle record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<ProductUnderlayment record={record} setPaginationClass={setPaginationClass} />)}
+        {(<ProductUnderlayment record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<ProductDecking record={record} setPaginationClass={setPaginationClass} />)}
+        {(<ProductDecking record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Overview record={record} setPaginationClass={setPaginationClass} />)}
+        {(<Overview record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Storm record={record} setPaginationClass={setPaginationClass} />)}
+        {(<Storm record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Hail record={record} setPaginationClass={setPaginationClass} />)}
+        {(<Hail record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Insurance record={record} setPaginationClass={setPaginationClass} />)}
+        {(<Insurance record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<RoofIntelligence record={record} setPaginationClass={setPaginationClass} />)}
+        {(<RoofIntelligence record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<HailImpacts record={record} setPaginationClass={setPaginationClass} />)}
+        {(<HailImpacts record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<GranularDamage record={record} setPaginationClass={setPaginationClass} />)}
+        {(<GranularDamage record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<MetalDamage record={record} setPaginationClass={setPaginationClass} />)}
+        {(<MetalDamage record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<ExposureEvaporation record={record} setPaginationClass={setPaginationClass} />)}
+        {(<ExposureEvaporation record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<ExposureBuild record={record} setPaginationClass={setPaginationClass} />)}
+        {(<ExposureBuild record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<ExposureDecking record={record} setPaginationClass={setPaginationClass} />)}
+        {(<ExposureDecking record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<RoofIntelligenceResult record={record} setPaginationClass={setPaginationClass} />)}
+        {(<RoofIntelligenceResult record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<About record={record} setPaginationClass={setPaginationClass} />)}
+        {(<About record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Benefits record={record} setPaginationClass={setPaginationClass} />)}
+        {(<Benefits record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<PersonalExperience record={record} setPaginationClass={setPaginationClass} />)}
+        {(<PersonalExperience record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<Testimonial record={record} setPaginationClass={setPaginationClass} />)}
+        {(<Testimonial record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<NextStepBase record={record} setPaginationClass={setPaginationClass} />)}
+        {(<NextStepBase record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<NextStepAnalysis record={record} setPaginationClass={setPaginationClass} />)}
+        {(<NextStepAnalysis record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<NextStepEstimate record={record} setPaginationClass={setPaginationClass} />)}
+        {(<NextStepEstimate record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<NextStepInstall record={record} setPaginationClass={setPaginationClass} />)}
+        {(<NextStepInstall record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
       <SwiperSlide>
-        {({ isActive }) => isActive && (<RoofCustomization record={record} setPaginationClass={setPaginationClass} />)}
+        {(<RoofCustomization record={record} setPaginationClass={setPaginationClass} />)}
       </SwiperSlide>
     </Swiper>
   );
