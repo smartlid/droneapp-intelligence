@@ -1,24 +1,28 @@
 @font-face {
-  font-family: 'Airbnb Cereal';
-  src: local('Airbnb Cereal'), url('../public/fonts/AirbnbCerealBlack.ttf') format('truetype');
+  font-family: "Airbnb Cereal";
+  src: local("Airbnb Cereal"),
+    url("../public/fonts/AirbnbCerealBlack.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Airbnb Cereal';
-  font-weight: bold; 
-  src: local('Airbnb Cereal'), url('../public/fonts/AirbnbCerealBold.ttf') format('truetype');
+  font-family: "Airbnb Cereal";
+  font-weight: bold;
+  src: local("Airbnb Cereal"),
+    url("../public/fonts/AirbnbCerealBold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Airbnb Cereal';
+  font-family: "Airbnb Cereal";
   font-weight: bolder;
-  src: local('Airbnb Cereal'), url('../public/fonts/AirbnbCerealExtraBold.ttf') format('truetype');
+  src: local("Airbnb Cereal"),
+    url("../public/fonts/AirbnbCerealExtraBold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Airbnb Cereal';
+  font-family: "Airbnb Cereal";
   font-weight: lighter;
-  src: local('Airbnb Cereal'), url('../public/fonts/AirbnbCerealLight.ttf') format('truetype');
+  src: local("Airbnb Cereal"),
+    url("../public/fonts/AirbnbCerealLight.ttf") format("truetype");
 }
 
 html,
@@ -48,7 +52,7 @@ a {
   width: 100%;
   height: 100%;
 }
-  
+
 .swiper-slide {
   font-size: 18px;
 
@@ -108,7 +112,6 @@ a {
 .dark .swiper-pagination-bullet-active {
   background: #e5e5e5 !important;
 }
-
 
 .fade-in-top-down {
   opacity: 0;
@@ -174,4 +177,36 @@ a {
   100% {
     height: 100%;
   }
+}
+
+.img-comp-container {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.img-comp-img img {
+  display: block;
+  vertical-align: middle;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  width: 40px;
+  height: 40px;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  opacity: 0.7;
+  border-radius: 50%;
 }

@@ -1,7 +1,96 @@
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./styles.module.scss";
 
 export default function ExposureEvaporation({ record, setPaginationClass }) {
+  const [roof, setRoof] = useState("");
+
+  useEffect(() => {
+    if (record) {
+      setRoof(record.fields["Moisture Exposure"][0]["url"]);
+    }
+  }, [record]);
+
+  useEffect(() => {
+    initComparisons();
+  }, []);
+
+  function initComparisons() {
+    var x, i;
+    x = document.getElementsByClassName("img-comp-overlay");
+
+    for (i = 0; i < x.length; i++) {
+      compareImages(x[i]);
+    }
+
+    // document.addEventListener('mousedown', function(e){
+    //   if(e.target && e.target.id === 'img-comp-slider') {
+    //     slideReady();
+    //   }
+    // });
+
+    function compareImages(img) {
+      var slider,
+        img,
+        clicked = 0,
+        w,
+        h;
+
+      w = img.offsetWidth;
+      h = img.offsetHeight;
+
+      img.style.width = w / 2 + "px";
+
+      slider = document.createElement("DIV");
+      slider.setAttribute("class", "img-comp-slider");
+      slider.setAttribute("id", "img-comp-slider");
+      img.parentElement.insertBefore(slider, img);
+      slider.style.top = h / 2 - slider.offsetHeight / 2 + "px";
+      slider.style.left = w / 2 - slider.offsetWidth / 2 + "px";
+      slider.addEventListener("mousedown", slideReady);
+      window.addEventListener("mouseup", slideFinish);
+      slider.addEventListener("touchstart", slideReady);
+      window.addEventListener("touchend", slideFinish);
+
+      function slideReady(e) {
+        console.log("Slide Ready");
+        e.preventDefault();
+        clicked = 1;
+        window.addEventListener("mousemove", slideMove);
+        window.addEventListener("touchmove", slideMove);
+      }
+
+      function slideFinish() {
+        clicked = 0;
+      }
+
+      function slideMove(e) {
+        var pos;
+        if (clicked == 0) return false;
+        pos = getCursorPos(e);
+        if (pos < 0) pos = 0;
+        if (pos > w) pos = w;
+        slide(pos);
+      }
+
+      function getCursorPos(e) {
+        var a,
+          x = 0;
+        e = e.changedTouches ? e.changedTouches[0] : e;
+        a = img.getBoundingClientRect();
+        x = e.pageX - a.left;
+        x = x - window.pageXOffset;
+
+        return x;
+      }
+
+      function slide(x) {
+        img.style.width = x + "px";
+        slider.style.left = img.offsetWidth - slider.offsetWidth / 2 + "px";
+      }
+    }
+  }
+
   return (
     <Swiper
       direction="vertical"
@@ -68,7 +157,7 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
       </SwiperSlide>
       <SwiperSlide>
         <div
-          className={styles.dark}
+          className={`${styles.dark} ${styles.exposure}`}
           style={{ width: "100%", height: "100%", position: "relative" }}
         >
           <div className={styles.content} style={{ display: "flex" }}>
@@ -94,11 +183,18 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
             </div>
 
             <div style={{ paddingLeft: "5%" }}>
-              <img
-                src="/assets/healthy-roof.png"
-                width={450}
-                style={{ borderRadius: "30px" }}
-              />
+              <div className="img-comp-container">
+                <div className="img-comp-img">
+                  <img src={roof} width="450px" height="450px" />
+                </div>
+                <div className="img-comp-img img-comp-overlay">
+                  <img
+                    src="/assets/healthy-roof.png"
+                    width="450px"
+                    height="450px"
+                  />
+                </div>
+              </div>
               <div
                 style={{
                   display: "flex",
