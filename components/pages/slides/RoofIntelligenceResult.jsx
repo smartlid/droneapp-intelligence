@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "@google/model-viewer";
 import styles from "./styles.module.scss";
 
 export default function Hail({ record, setPaginationClass }) {
   const [impactCount, setImpactCount] = useState(0);
   const [address, setAddress] = useState("");
   const [roof, setRoof] = useState("");
+  const [map, setMap] = useState("");
 
   useEffect(() => {
     if (record) {
       setImpactCount(record.fields["# of Hail Impacts"]);
       setAddress(record.fields["Property Address"]);
       setRoof(record.fields["Moisture Exposure"][0]["url"]);
+      setMap(record.fields["3D-Model"][0]["url"]);
     }
   }, [record]);
 
@@ -111,7 +114,7 @@ export default function Hail({ record, setPaginationClass }) {
           transform: "translate(-50%, 40%)",
         }}
       />
-      <img
+      <div
         src="/assets/map-model.png"
         style={{
           position: "absolute",
@@ -119,7 +122,16 @@ export default function Hail({ record, setPaginationClass }) {
           left: "50%",
           transform: "translate(-50%)",
         }}
-      />
+      >
+        <model-viewer
+          src={map}
+          alt="3D model of map"
+          ar
+          // loading='lazy'
+          camera-controls
+          autoplay
+        ></model-viewer>
+      </div>
       <p
         style={{
           position: "absolute",

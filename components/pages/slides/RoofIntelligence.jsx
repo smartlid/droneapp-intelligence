@@ -1,10 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
+import "@google/model-viewer";
 
-export default function RoofIntelligence({ setPaginationClass }) {
+export default function RoofIntelligence({ record, setPaginationClass }) {
+  const [map, setMap] = useState("");
+  
   useEffect(() => {
     setPaginationClass("light");
   }, [setPaginationClass]);
+
+  useEffect(() => {
+    if (record) {
+      setMap(record.fields["3D-Model"][0]["url"]);
+    }
+  }, [record])
 
   return (
     <div className={`${styles.slide} ${styles["slide-roof"]} ${styles.roof}`}>
@@ -48,7 +57,15 @@ export default function RoofIntelligence({ setPaginationClass }) {
             marginTop: "120px",
           }}
         >
-          <img src="/assets/map-model.png" width="60%" />
+          {/* <img src="/assets/map-model.png" width="60%" /> */}
+          <model-viewer
+            src={map}
+            alt="3D model of map"
+            ar
+            // loading='lazy'
+            camera-controls
+            autoplay
+          ></model-viewer>
         </div>
       </div>
     </div>

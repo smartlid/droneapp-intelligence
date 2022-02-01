@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "@google/model-viewer";
 import styles from "./styles.module.scss";
 
 export default function Hail({ record, setPaginationClass }) {
@@ -7,6 +8,7 @@ export default function Hail({ record, setPaginationClass }) {
   const [hailImpacts, setHailImpacts] = useState([]);
   const [impactCount, setImpactCount] = useState(0);
   const [address, setAddress] = useState("");
+  const [map, setMap] = useState("");
 
   const onClickImage = () => {
     console.log(index);
@@ -23,6 +25,7 @@ export default function Hail({ record, setPaginationClass }) {
       setHailImpacts(impacts);
       setImpactCount(record.fields["# of Hail Impacts"]);
       setAddress(record.fields["Property Address"]);
+      setMap(record.fields["3D-Model"][0]["url"]);
     }
   }, [record]);
 
@@ -118,7 +121,7 @@ export default function Hail({ record, setPaginationClass }) {
       </SwiperSlide>
       <SwiperSlide>
         <div
-          className={styles.dark}
+          className={`${styles.dark} ${styles.impacts}`}
           style={{ width: "100%", height: "100%", position: "relative" }}
         >
           <div
@@ -171,15 +174,24 @@ export default function Hail({ record, setPaginationClass }) {
               transform: "translate(-50%, 40%)",
             }}
           />
-          <img
-            src="/assets/map-model.png"
+          <div
             style={{
               position: "absolute",
               bottom: "2%",
               left: "50%",
               transform: "translate(-50%)",
             }}
-          />
+          >
+            <model-viewer
+              src={map}
+              poster="/assets/models/poster.png"
+              alt='Roof'
+              ar
+              // loading='lazy'
+              camera-controls
+              autoplay
+            ></model-viewer>
+          </div>
           <p
             style={{
               position: "absolute",

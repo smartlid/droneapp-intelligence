@@ -424,9 +424,19 @@
 .roof {
   color: #fff;
   background: rgb(221, 221, 221);
+
+  model-viewer {
+    width: 400px;
+    height: 400px;
+  }
 }
 
 .impacts {
+  model-viewer {
+    width: 400px;
+    height: 400px;
+  }
+
   &__title {
     font-size: 24px;
     font-weight: bolder;

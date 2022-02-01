@@ -20,14 +20,23 @@ import Overview from "./slides/Overview";
 import Storm from "./slides/Storm";
 import Hail from "./slides/Hail";
 import Insurance from "./slides/Insurance";
-import RoofIntelligence from "./slides/RoofIntelligence";
-import HailImpacts from "./slides/HailImpacts";
+const RoofIntelligence = dynamic(
+  () => import("./slides/RoofIntelligence"),
+  { ssr: false }
+)
+const HailImpacts = dynamic(
+  () => import("./slides/HailImpacts"),
+  { ssr: false }
+)
 import GranularDamage from "./slides/GranularDamage";
 import MetalDamage from "./slides/MetalDamage";
 import ExposureEvaporation from "./slides/ExposureEvaporation";
 import ExposureBuild from "./slides/ExposureBuild";
 import ExposureDecking from "./slides/ExposureDecking";
-import RoofIntelligenceResult from "./slides/RoofIntelligenceResult";
+const RoofIntelligenceResult = dynamic(
+  () => import("./slides/RoofIntelligenceResult"),
+  { ssr: false }
+)
 import About from "./slides/About";
 import Benefits from "./slides/Benefits";
 import PersonalExperience from "./slides/PersonalExperience";
