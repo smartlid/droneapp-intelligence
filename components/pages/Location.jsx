@@ -33,13 +33,11 @@ import "swiper/css/pagination";
 import "swiper/css/effect-creative"
 
 import SwiperCore, {
-  EffectCreative,
   Mousewheel,
   Pagination,
 } from "swiper";
 
 SwiperCore.use([
-  EffectCreative,
   Mousewheel,
   Pagination,
 ]);
@@ -88,11 +86,6 @@ export default function Location() {
   return (
     <Swiper
       direction="vertical"
-      effect="creative"
-      creativeEffect={{
-        prev: { shadow: true, translate: [0, 0, -400] },
-        next: { translate: [0, '100%', 0] }
-      }}
       slidesPerView={1}
       mousewheel={true}
       speed={1000}
