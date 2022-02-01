@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/model-viewer": "^1.10.1",
     "@react-three/fiber": "^7.0.25",
     "airtable": "^0.11.1",
     "next": "12.0.9",

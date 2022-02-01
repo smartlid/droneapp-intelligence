@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import styles from "./styles.module.scss";
+import "@google/model-viewer";
 
 export default function ProductShingle({ setPaginationClass }) {
   useEffect(() => {
@@ -30,7 +31,16 @@ export default function ProductShingle({ setPaginationClass }) {
             <p className={`${styles.list} ${styles.last}`}>Decking Analysis</p>
           </div>
           <div style={{ flex: "0 0 65%" }}>
-            <img src="/assets/product1.png" />
+            {/* <img src="/assets/product1.png" /> */}
+            <model-viewer
+              src="/assets/models/roof-scheme.glb"
+              poster="/assets/models/poster.png"
+              alt='Roof'
+              ar
+              // loading='lazy'
+              camera-controls
+              autoplay
+            ></model-viewer>
           </div>
         </div>
       </div>

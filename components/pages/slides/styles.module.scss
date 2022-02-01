@@ -201,6 +201,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
   }
 
@@ -265,6 +266,12 @@
         content: none;
       }
     }
+  }
+
+  model-viewer {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
   }
 }
 
