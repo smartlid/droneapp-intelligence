@@ -1,6 +1,28 @@
+import { useState } from "react";
 import styles from "./styles.module.scss";
 
-export default function ExposureEvaporation({ record, setPaginationClass }) {
+export default function ExposureEvaporation() {
+  const [evaporationActive, setEvaporationActive] = useState(true);
+  const [buildActive, setBuildActive] = useState(false);
+  const [deckingActive, setDeckingActive] = useState(false);
+  const [image, setImage] = useState("evaporation.png");
+
+  const onClickItem = (item) => {
+    setEvaporationActive(item === "evaporation");
+    setBuildActive(item === "build");
+    setDeckingActive(item === "decking");
+
+    switch (item) {
+      case "evaporation":
+        setImage("evaporation.png"); break;
+      case "build":
+        setImage("evaporation-build.png"); break;
+      case "decking":
+        setImage("evaporation.png"); break;
+      default: break;
+    }
+  }
+  
   return (
     <div className={`${styles.slide} ${styles.dark}`}>
       <img
@@ -30,7 +52,7 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
           }}
         >
           <div style={{ flex: "0 0 50%" }}>
-            <img src="/assets/evaporation.png" width="100%" />
+            <img src={`/assets/${image}`} width="100%" />
           </div>
           <div
             style={{
@@ -39,11 +61,11 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
             }}
           >
             <div>
-              <div className={`${styles.exposure__title} ${styles.active}`}>
+              <div className={`${styles.exposure__title} ${evaporationActive ? styles.active : ""}`} onClick={() => onClickItem("evaporation")}>
                 Evaporation
               </div>
-              <div className={`${styles.exposure__title}`}>Build up</div>
-              <div className={`${styles.exposure__title} ${styles.last}`}>
+              <div className={`${styles.exposure__title} ${buildActive ? styles.active : ""}`} onClick={() => onClickItem("build")}>Build up</div>
+              <div className={`${styles.exposure__title} ${deckingActive ? styles.active : ""} ${styles.last}`} onClick={() => onClickItem("decking")}>
                 Decking
               </div>
             </div>

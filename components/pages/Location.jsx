@@ -102,8 +102,6 @@ export default function Location() {
       {(<RoofIntelligence record={record} setPaginationClass={setPaginationClass} />)}
       {(<HailImpacts record={record} setPaginationClass={setPaginationClass} />)}
       {(<ExposureEvaporation record={record} setPaginationClass={setPaginationClass} />)}
-      {(<ExposureBuild record={record} setPaginationClass={setPaginationClass} />)}
-      {(<ExposureDecking record={record} setPaginationClass={setPaginationClass} />)}
       {(<RoofIntelligenceResult record={record} setPaginationClass={setPaginationClass} />)}
       {(<About record={record} setPaginationClass={setPaginationClass} />)}
       {(<Benefits record={record} setPaginationClass={setPaginationClass} />)}
