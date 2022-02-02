@@ -8,15 +8,7 @@ export default function Hail({ setPaginationClass }) {
   }, [setPaginationClass]);
 
   return (
-    <Swiper
-      direction="vertical"
-      slidesPerView={1}
-      mousewheel={true}
-      speed={1000}
-      spaceBetween={0}
-      nested={true}
-    >
-      <SwiperSlide>
+      <>
         <div className={`${styles.slide} ${styles.hail}`}>
           <img
             src="/assets/remote-roofing-logo-white.png"
@@ -142,9 +134,7 @@ export default function Hail({ setPaginationClass }) {
             </div>
           </div>
         </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className={`${styles["hail-slide"]} ${styles.hail}`}>
+        <div className={`${styles.slide} ${styles["hail-slide"]} ${styles.hail}`}>
           {/* Roof Hail Impacts */}
           <div className={styles.hail__content} style={{ margin: "0" }}>
             <div
@@ -193,7 +183,6 @@ export default function Hail({ setPaginationClass }) {
             </div>
           </div>
         </div>
-      </SwiperSlide>
-    </Swiper>
+      </>
   );
 }
