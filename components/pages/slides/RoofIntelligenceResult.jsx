@@ -24,8 +24,8 @@ export default function Hail({ record, setPaginationClass }) {
 
   return (
     <div
-      className={styles.dark}
-      style={{ width: "100%", height: "100%", position: "relative" }}
+      className={`${styles.dark} ${styles.roof}`}
+      style={{ width: "100%", height: "100%", position: "relative", color: "#fff", background: "#000000" }}
     >
       <div
         style={{
