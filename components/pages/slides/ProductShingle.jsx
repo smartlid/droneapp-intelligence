@@ -38,7 +38,7 @@ export default function ProductShingle({ setPaginationClass }) {
               alt="Roof"
               ar
               // loading='lazy'
-              // camera-controls
+              camera-controls
               camera-orbit="-578.6deg 86.78deg auto"
               auto-rotate
             >

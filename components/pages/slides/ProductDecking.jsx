@@ -35,11 +35,12 @@ export default function ProductDecking({ setPaginationClass }) {
             <model-viewer
               src="/assets/models/roof-scheme.glb"
               poster="/assets/models/poster.png"
-              alt='Roof'
+              alt="Roof"
               ar
               // loading='lazy'
               camera-controls
-              autoplay
+              camera-orbit="-578.6deg 86.78deg auto"
+              auto-rotate
             ></model-viewer>
           </div>
         </div>
