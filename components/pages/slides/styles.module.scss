@@ -550,7 +550,7 @@
   &__left-circle {
     position: relative;
     border: 1px dashed #075bbd;
-    left: 20%;
+    left: 0;
     width: 24%;
     padding-bottom: 24%;
     border-radius: 100%;
@@ -604,7 +604,7 @@
     position: absolute;
     z-index: -1;
     top: 0;
-    left: 20%;
+    left: 0;
     transform: translate(75%);
     width: 24%;
     padding-bottom: 24%;
