@@ -20,8 +20,6 @@ const HailImpacts = dynamic(
   { ssr: false }
 )
 import ExposureEvaporation from "./slides/ExposureEvaporation";
-import ExposureBuild from "./slides/ExposureBuild";
-import ExposureDecking from "./slides/ExposureDecking";
 const RoofIntelligenceResult = dynamic(
   () => import("./slides/RoofIntelligenceResult"),
   { ssr: false }
@@ -31,9 +29,6 @@ import Benefits from "./slides/Benefits";
 import PersonalExperience from "./slides/PersonalExperience";
 import Testimonial from "./slides/Testimonial";
 import NextStepBase from "./slides/NextStepBase";
-import NextStepAnalysis from "./slides/NextStepAnalysis";
-import NextStepEstimate from "./slides/NextStepEstimate";
-import NextStepInstall from "./slides/NextStepInstall";
 import RoofCustomization from "./slides/RoofCustomization";
 
 import "swiper/css";
@@ -108,9 +103,6 @@ export default function Location() {
       {(<PersonalExperience record={record} setPaginationClass={setPaginationClass} />)}
       {(<Testimonial record={record} setPaginationClass={setPaginationClass} />)}
       {(<NextStepBase record={record} setPaginationClass={setPaginationClass} />)}
-      {(<NextStepAnalysis record={record} setPaginationClass={setPaginationClass} />)}
-      {(<NextStepEstimate record={record} setPaginationClass={setPaginationClass} />)}
-      {(<NextStepInstall record={record} setPaginationClass={setPaginationClass} />)}
       {(<RoofCustomization record={record} setPaginationClass={setPaginationClass} />)}
     </>
   );

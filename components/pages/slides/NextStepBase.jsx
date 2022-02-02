@@ -1,6 +1,28 @@
+import { useState } from "react";
 import styles from "./styles.module.scss";
 
 export default function NextStepBase() {
+  const [analysisActive, setAnalysisActive] = useState(false);
+  const [estimateActive, setEstimateActive] = useState(false);
+  const [installActive, setinstallActive] = useState(false);
+  const [image, setImage] = useState("map-model.png");
+
+  const onClickItem = (item) => {
+    setAnalysisActive(item === "analysis");
+    setEstimateActive(item === "estimate");
+    setinstallActive(item === "install");
+
+    switch (item) {
+      case "analysis":
+        setImage("analysis.png"); break;
+      case "estimate":
+        setImage("estimate.png"); break;
+      case "install":
+        setImage("illustration.png"); break;
+      default: break;
+    }
+  }
+
   return (
     <div className={`${styles.slide} ${styles["slide-about"]} ${styles.steps}`}>
       <img
@@ -52,12 +74,47 @@ export default function NextStepBase() {
               fontWeight: "bolder",
             }}
           >
-            <p className={styles.list}>Analysis Confirmation</p>
-            <p className={styles.list}>Finalized Estimate</p>
-            <p className={`${styles.list} ${styles.last}`}>Roof Installation</p>
+            <p className={`${styles.list} ${analysisActive ? styles.active : ""}`} onClick={() => onClickItem("analysis")}>Analysis Confirmation</p>
+            { analysisActive && (
+              <>
+                <p
+                  style={{ fontSize: "18px" }}
+                >{`Remote Roofing’s team works with your insurance company to confirm damage analysis`}</p>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <img src="/assets/clock.png" style={{ marginRight: "10px" }} />
+                  <p style={{ fontSize: "20px" }}>2 - 3 BUSINESS DAYS</p>
+                </div>
+              </>
+            )}
+
+            <p className={`${styles.list} ${estimateActive ? styles.active : ""}`} onClick={() => onClickItem("estimate")}>Finalized Estimate</p>
+            { estimateActive && (
+              <>
+                <p
+                  style={{ fontSize: "18px" }}
+                >{`Remote Roofing’s team ensures all the damages have received insurance coverage`}</p>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <img src="/assets/clock.png" style={{ marginRight: "10px" }} />
+                  <p style={{ fontSize: "20px" }}>3 BUSINESS DAYS</p>
+                </div>
+              </>
+            )}
+
+            <p className={`${styles.list} ${installActive ? styles.active : ""} ${styles.last}`} onClick={() => onClickItem("install")}>Roof Installation</p>
+            { installActive && (
+              <>
+                <p
+                  style={{ fontSize: "18px" }}
+                >{`Remote Roofing’s experienced team completes the roof replacement and installation `}</p>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <img src="/assets/clock.png" style={{ marginRight: "10px" }} />
+                  <p style={{ fontSize: "20px" }}>24 HOURS</p>
+                </div>
+              </>
+            )}
           </div>
           <div style={{ flex: "0 0 50%", marginTop: "-50px" }}>
-            <img src="/assets/map-model.png" style={{ width: "100%" }} />
+            <img src={`/assets/${image}`} style={{ width: "100%" }} />
           </div>
         </div>
       </div>
