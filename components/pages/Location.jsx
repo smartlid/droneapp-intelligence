@@ -103,87 +103,32 @@ export default function Location() {
   }, [router.query]);
 
   return (
-    <Swiper
-      direction="vertical"
-      slidesPerView={1}
-      mousewheel={true}
-      speed={1000}
-    >
-      <SwiperSlide>
-        {(<Home record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<ProductShingle record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<ProductUnderlayment record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<ProductDecking record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<Overview record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<Storm record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<Hail record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<Insurance record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<RoofIntelligence record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<HailImpacts record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<GranularDamage record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<MetalDamage record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<ExposureEvaporation record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<ExposureBuild record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<ExposureDecking record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<RoofIntelligenceResult record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<About record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<Benefits record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<PersonalExperience record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<Testimonial record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<NextStepBase record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<NextStepAnalysis record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<NextStepEstimate record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<NextStepInstall record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-      <SwiperSlide>
-        {(<RoofCustomization record={record} setPaginationClass={setPaginationClass} />)}
-      </SwiperSlide>
-    </Swiper>
+    <>
+      {(<Home record={record} setPaginationClass={setPaginationClass} />)}
+      {(<ProductShingle record={record} setPaginationClass={setPaginationClass} />)}
+      {(<ProductUnderlayment record={record} setPaginationClass={setPaginationClass} />)}
+      {(<ProductDecking record={record} setPaginationClass={setPaginationClass} />)}
+      {(<Overview record={record} setPaginationClass={setPaginationClass} />)}
+      {(<Storm record={record} setPaginationClass={setPaginationClass} />)}
+      {(<Hail record={record} setPaginationClass={setPaginationClass} />)}
+      {(<Insurance record={record} setPaginationClass={setPaginationClass} />)}
+      {(<RoofIntelligence record={record} setPaginationClass={setPaginationClass} />)}
+      {(<HailImpacts record={record} setPaginationClass={setPaginationClass} />)}
+      {(<GranularDamage record={record} setPaginationClass={setPaginationClass} />)}
+      {(<MetalDamage record={record} setPaginationClass={setPaginationClass} />)}
+      {(<ExposureEvaporation record={record} setPaginationClass={setPaginationClass} />)}
+      {(<ExposureBuild record={record} setPaginationClass={setPaginationClass} />)}
+      {(<ExposureDecking record={record} setPaginationClass={setPaginationClass} />)}
+      {(<RoofIntelligenceResult record={record} setPaginationClass={setPaginationClass} />)}
+      {(<About record={record} setPaginationClass={setPaginationClass} />)}
+      {(<Benefits record={record} setPaginationClass={setPaginationClass} />)}
+      {(<PersonalExperience record={record} setPaginationClass={setPaginationClass} />)}
+      {(<Testimonial record={record} setPaginationClass={setPaginationClass} />)}
+      {(<NextStepBase record={record} setPaginationClass={setPaginationClass} />)}
+      {(<NextStepAnalysis record={record} setPaginationClass={setPaginationClass} />)}
+      {(<NextStepEstimate record={record} setPaginationClass={setPaginationClass} />)}
+      {(<NextStepInstall record={record} setPaginationClass={setPaginationClass} />)}
+      {(<RoofCustomization record={record} setPaginationClass={setPaginationClass} />)}
+    </>
   );
 }

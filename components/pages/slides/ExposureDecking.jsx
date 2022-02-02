@@ -92,15 +92,7 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
   }
 
   return (
-    <Swiper
-      direction="vertical"
-      slidesPerView={1}
-      mousewheel={true}
-      speed={1000}
-      spaceBetween={0}
-      nested={true}
-    >
-      <SwiperSlide>
+      <>
         <div className={`${styles.slide} ${styles.dark}`}>
           <img
             src="/assets/remote-roofing-logo-white.png"
@@ -154,10 +146,8 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
             </div>
           </div>
         </div>
-      </SwiperSlide>
-      <SwiperSlide>
         <div
-          className={`${styles.dark} ${styles.exposure}`}
+          className={`${styles.slide} ${styles.dark} ${styles.exposure}`}
           style={{ width: "100%", height: "100%", position: "relative" }}
         >
           <div className={styles.content} style={{ display: "flex" }}>
@@ -209,7 +199,6 @@ export default function ExposureEvaporation({ record, setPaginationClass }) {
             </div>
           </div>
         </div>
-      </SwiperSlide>
-    </Swiper>
+      </>
   );
 }
