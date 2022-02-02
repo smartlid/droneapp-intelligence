@@ -2,18 +2,9 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import Airtable from "airtable";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Home from "./slides/Home";
 const ProductShingle = dynamic(
   () => import("./slides/ProductShingle"),
-  { ssr: false }
-)
-const ProductUnderlayment = dynamic(
-  () => import("./slides/ProductUnderlayment"),
-  { ssr: false }
-)
-const ProductDecking = dynamic(
-  () => import("./slides/ProductDecking"),
   { ssr: false }
 )
 import Overview from "./slides/Overview";
@@ -106,8 +97,6 @@ export default function Location() {
     <>
       {(<Home record={record} setPaginationClass={setPaginationClass} />)}
       {(<ProductShingle record={record} setPaginationClass={setPaginationClass} />)}
-      {(<ProductUnderlayment record={record} setPaginationClass={setPaginationClass} />)}
-      {(<ProductDecking record={record} setPaginationClass={setPaginationClass} />)}
       {(<Overview record={record} setPaginationClass={setPaginationClass} />)}
       {(<Storm record={record} setPaginationClass={setPaginationClass} />)}
       {(<Hail record={record} setPaginationClass={setPaginationClass} />)}

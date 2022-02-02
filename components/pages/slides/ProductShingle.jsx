@@ -1,11 +1,28 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import "@google/model-viewer";
 
-export default function ProductShingle({ setPaginationClass }) {
-  useEffect(() => {
-    setPaginationClass("light");
-  }, [setPaginationClass]);
+export default function ProductShingle() {
+  const [firstActive, setFirstActive] = useState(true);
+  const [secondActive, setSecondActive] = useState(false);
+  const [thirdActive, setThirdActive] = useState(false);
+  const [roof, setRoof] = useState("roof-shingle.glb")
+
+  const onClickItem = (item) => {
+    setFirstActive(item === "first");
+    setSecondActive(item === "second");
+    setThirdActive(item === "third");
+
+    switch (item) {
+      case "first":
+        setRoof("roof-shingle.glb"); break;
+      case "second":
+        setRoof("roof-felt.glb"); break;
+      case "third":
+        setRoof("roof-decking.glb"); break;
+      default: break;
+    }
+  }
 
   return (
     <div
@@ -23,17 +40,16 @@ export default function ProductShingle({ setPaginationClass }) {
             alt="drone"
             className={`${styles.product__drone} fade-in-top-down`}
           />
-          <div style={{ flex: "0 0 35%", paddingTop: "10%" }}>
-            <p className={`${styles.list} ${styles.active}`}>
+          <div style={{ flex: "0 0 40%", paddingTop: "10%" }}>
+            <p className={`${styles.list} ${firstActive ? styles.active : ""}`} onClick={() => onClickItem("first")}>
               Shingle Analysis
             </p>
-            <p className={`${styles.list}`}>Underlayment Analysis</p>
-            <p className={`${styles.list} ${styles.last}`}>Decking Analysis</p>
+            <p className={`${styles.list} ${secondActive ? styles.active : ""}`} onClick={() =>onClickItem("second")}>Underlayment Analysis</p>
+            <p className={`${styles.list} ${thirdActive ? styles.active : ""} ${styles.last}`} onClick={() => onClickItem("third")}>Decking Analysis</p>
           </div>
-          <div style={{ flex: "0 0 65%" }}>
-            {/* <img src="/assets/product1.png" /> */}
+          <div style={{ flex: "0 0 60%" }}>
             <model-viewer
-              src="/assets/models/roof-scheme.glb"
+              src={`/assets/models/${roof}`}
               poster="/assets/models/poster.png"
               alt="Roof"
               ar
@@ -41,41 +57,7 @@ export default function ProductShingle({ setPaginationClass }) {
               camera-controls
               camera-orbit="-578.6deg 86.78deg auto"
               auto-rotate
-            >
-              <button
-                className="Hotspot"
-                slot="hotspot-1"
-                data-position="0.6388834847940408m 2.587730473859438m -4.858675086561681m"
-                data-normal="-0.4308964476455713m 0.90240138043247m -1.3877787807814454e-17m"
-                data-visibility-attribute="visible"
-              >
-                <div className="HotspotAnnotation">Shingles</div>
-              </button>
-              <button
-                className="Hotspot"
-                slot="hotspot-2"
-                data-position="0.9450196153931945m 1.7477314953922551m -5.458971122385296m"
-                data-normal="-0.43089666926380654m 0.9024012746097811m -1.3877787807814454e-17m"
-                data-visibility-attribute="visible"
-              >
-                <div className="HotspotAnnotation">Felt</div>
-              </button>
-              <button
-                className="Hotspot"
-                slot="hotspot-5"
-                data-position="0.27918332393458023m 0.8888505241907525m -7.583022577831132m"
-                data-normal="-0.43089586455699563m 0.9024016588568968m 0m"
-                data-visibility-attribute="visible"
-              >
-                <div className="HotspotAnnotation">Decking</div>
-              </button>
-              <div className="progress-bar hide" slot="progress-bar">
-                <div className="update-bar"></div>
-              </div>
-              <button slot="ar-button" id="ar-button">
-                View in your space
-              </button>
-            </model-viewer>
+            ></model-viewer>
           </div>
         </div>
       </div>
