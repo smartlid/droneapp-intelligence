@@ -35,12 +35,47 @@ export default function ProductShingle({ setPaginationClass }) {
             <model-viewer
               src="/assets/models/roof-scheme.glb"
               poster="/assets/models/poster.png"
-              alt='Roof'
+              alt="Roof"
               ar
               // loading='lazy'
-              camera-controls
-              autoplay
-            ></model-viewer>
+              // camera-controls
+              camera-orbit="-578.6deg 86.78deg auto"
+              auto-rotate
+            >
+              <button
+                className="Hotspot"
+                slot="hotspot-1"
+                data-position="0.6388834847940408m 2.587730473859438m -4.858675086561681m"
+                data-normal="-0.4308964476455713m 0.90240138043247m -1.3877787807814454e-17m"
+                data-visibility-attribute="visible"
+              >
+                <div className="HotspotAnnotation">Shingles</div>
+              </button>
+              <button
+                className="Hotspot"
+                slot="hotspot-2"
+                data-position="0.9450196153931945m 1.7477314953922551m -5.458971122385296m"
+                data-normal="-0.43089666926380654m 0.9024012746097811m -1.3877787807814454e-17m"
+                data-visibility-attribute="visible"
+              >
+                <div className="HotspotAnnotation">Felt</div>
+              </button>
+              <button
+                className="Hotspot"
+                slot="hotspot-5"
+                data-position="0.27918332393458023m 0.8888505241907525m -7.583022577831132m"
+                data-normal="-0.43089586455699563m 0.9024016588568968m 0m"
+                data-visibility-attribute="visible"
+              >
+                <div className="HotspotAnnotation">Decking</div>
+              </button>
+              <div className="progress-bar hide" slot="progress-bar">
+                <div className="update-bar"></div>
+              </div>
+              <button slot="ar-button" id="ar-button">
+                View in your space
+              </button>
+            </model-viewer>
           </div>
         </div>
       </div>
