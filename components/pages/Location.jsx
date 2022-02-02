@@ -19,8 +19,6 @@ const HailImpacts = dynamic(
   () => import("./slides/HailImpacts"),
   { ssr: false }
 )
-import GranularDamage from "./slides/GranularDamage";
-import MetalDamage from "./slides/MetalDamage";
 import ExposureEvaporation from "./slides/ExposureEvaporation";
 import ExposureBuild from "./slides/ExposureBuild";
 import ExposureDecking from "./slides/ExposureDecking";
@@ -103,8 +101,6 @@ export default function Location() {
       {(<Insurance record={record} setPaginationClass={setPaginationClass} />)}
       {(<RoofIntelligence record={record} setPaginationClass={setPaginationClass} />)}
       {(<HailImpacts record={record} setPaginationClass={setPaginationClass} />)}
-      {(<GranularDamage record={record} setPaginationClass={setPaginationClass} />)}
-      {(<MetalDamage record={record} setPaginationClass={setPaginationClass} />)}
       {(<ExposureEvaporation record={record} setPaginationClass={setPaginationClass} />)}
       {(<ExposureBuild record={record} setPaginationClass={setPaginationClass} />)}
       {(<ExposureDecking record={record} setPaginationClass={setPaginationClass} />)}

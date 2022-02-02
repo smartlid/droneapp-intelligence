@@ -68,6 +68,7 @@ export default function Insurance({ setPaginationClass }) {
             opacity: 0,
             animationFillMode: "forwards",
             animationDelay: "1.9s",
+            width: "45%",
           }}
           className="fade-in-top-down"
         />
