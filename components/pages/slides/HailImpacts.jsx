@@ -60,7 +60,7 @@ export default function Hail({ record, setPaginationClass }) {
                 height: "100%",
               }}
             >
-              <div style={{ flex: "0 0 35%" }}>
+              <div style={{ flex: "0 0 45%" }}>
                 <img
                   src={hailImpacts.length && hailImpacts[index]}
                   width="100%"

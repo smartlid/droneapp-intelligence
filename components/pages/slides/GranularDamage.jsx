@@ -32,7 +32,7 @@ export default function GranularDamage({ record, setPaginationClass }) {
             height: "100%",
           }}
         >
-          <div style={{ flex: "0 0 35%" }}>
+          <div style={{ flex: "0 0 45%" }}>
             <img src={damage} width="100%" style={{ borderRadius: "30px" }} />
           </div>
           <div
