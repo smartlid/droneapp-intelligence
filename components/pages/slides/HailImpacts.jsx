@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "@google/model-viewer";
 import styles from "./styles.module.scss";
 
-export default function Hail({ record, setPaginationClass }) {
+export default function Hail({ record }) {
   const [index, setIndex] = useState(0);
   const [hailImpacts, setHailImpacts] = useState([]);
   const [impactCount, setImpactCount] = useState(0);
   const [address, setAddress] = useState("");
   const [map, setMap] = useState("");
+  const [granularDamage, setGranularDamage] = useState("");
+  const [metalDamage, setMetalDamage] = useState("");
+  const [impactActive, setImpactActive] = useState(true);
+  const [granularActive, setGranularActive] = useState(false);
+  const [metalActive, setMetalActive] = useState(false);
 
   const onClickImage = () => {
-    console.log(index);
     setIndex((oldIndex) => (oldIndex + 1) % 3);
   };
 
@@ -26,12 +29,16 @@ export default function Hail({ record, setPaginationClass }) {
       setImpactCount(record.fields["# of Hail Impacts"]);
       setAddress(record.fields["Property Address"]);
       setMap(record.fields["3D-Model"][0]["url"]);
+      setGranularDamage(record.fields["SG-1"][0]["url"]);
+      setMetalDamage(record.fields["SM-1"][0]["url"]);
     }
   }, [record]);
 
-  useEffect(() => {
-    setPaginationClass("dark");
-  }, [setPaginationClass]);
+  const onClickItem = (item) => {
+    setImpactActive(item === "impact");
+    setGranularActive(item === "granular");
+    setMetalActive(item === "metal");
+  }
 
   return (
       <>
@@ -53,16 +60,25 @@ export default function Hail({ record, setPaginationClass }) {
               }}
             >
               <div style={{ flex: "0 0 45%" }}>
-                <img
-                  src={hailImpacts.length && hailImpacts[index]}
-                  width="100%"
-                  style={{ borderRadius: "30px" }}
-                />
+                { impactActive && (
+                  <img
+                    src={hailImpacts.length && hailImpacts[index]}
+                    width="100%"
+                    style={{ borderRadius: "30px" }}
+                    onClick={onClickImage}
+                  />
+                )}
+                { granularActive && (
+                  <img src={granularDamage} width="100%" style={{ borderRadius: "30px" }} />
+                )}
+                { metalActive && (
+                  <img src={metalDamage} width="100%" style={{ borderRadius: "30px" }} />
+                )}
               </div>
               <div
                 style={{
                   flex: "0 0 50%",
-                  padding: "0 50px",
+                  padding: "0",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -70,129 +86,196 @@ export default function Hail({ record, setPaginationClass }) {
                 }}
               >
                 <div style={{ textAlign: "left" }}>
-                  <div className={`${styles.impacts__title} ${styles.active}`}>
+                  <div className={`${styles.impacts__title} ${impactActive ? styles.active : ""}`} onClick={() => onClickItem("impact")}>
                     Hail Impacts
                   </div>
-                  <div style={{ display: "flex", alignItems: "center" }}>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        marginRight: "15px",
-                      }}
-                    >
-                      <img
-                        src="/assets/cracked.png"
-                        width={30}
-                        style={{ marginRight: "10px" }}
-                      />
-                      <p style={{ fontSize: "18px", width: "70px" }}>
-                        Cracked Shingles
-                      </p>
-                    </div>
+                  { impactActive && (
                     <div style={{ display: "flex", alignItems: "center" }}>
-                      <img
-                        src="/assets/granule.png"
-                        width={30}
-                        style={{ marginRight: "10px" }}
-                      />
-                      <p style={{ fontSize: "18px", width: "70px" }}>
-                        Granule Reduction
-                      </p>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          marginRight: "15px",
+                        }}
+                      >
+                        <img
+                          src="/assets/cracked.png"
+                          width={30}
+                          style={{ marginRight: "10px" }}
+                        />
+                        <p style={{ fontSize: "18px", width: "70px" }}>
+                          Cracked Shingles
+                        </p>
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        <img
+                          src="/assets/granule.png"
+                          width={30}
+                          style={{ marginRight: "10px" }}
+                        />
+                        <p style={{ fontSize: "18px", width: "70px" }}>
+                          Granule Reduction
+                        </p>
+                      </div>
                     </div>
+                  )}
+
+                  <div className={`${styles.impacts__title} ${granularActive ? styles.active : ""}`} onClick={() => onClickItem("granular")}>Granular Loss</div>
+                  { granularActive && (
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          marginRight: "15px",
+                        }}
+                      >
+                        <img
+                          src="/assets/bruised-shingle.png"
+                          width={30}
+                          style={{ marginRight: "10px" }}
+                        />
+                        <p style={{ fontSize: "18px", width: "70px" }}>
+                          Bruised Shingles
+                        </p>
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        <img
+                          src="/assets/gutter-build-up.png"
+                          width={30}
+                          style={{ marginRight: "10px" }}
+                        />
+                        <p style={{ fontSize: "18px", width: "70px" }}>
+                          Gutter Build Up
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className={`${styles.impacts__title} ${metalActive ? styles.active : ""} ${styles.last}`} onClick={() => onClickItem("metal")}>
+                    Metal Damage
                   </div>
-                  <div className={styles.impacts__title}>Granular Damage</div>
-                  <div className={`${styles.impacts__title} ${styles.last}`}>
-                    Soft Metal Damage
-                  </div>
+                  { metalActive && (
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          marginRight: "30px",
+                        }}
+                      >
+                        <img
+                          src="/assets/improper-ventillation.png"
+                          width={30}
+                          style={{ marginRight: "10px" }}
+                        />
+                        <p style={{ fontSize: "18px", width: "70px" }}>
+                          Improper Ventillation
+                        </p>
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        <img
+                          src="/assets/structural-defect.png"
+                          width={30}
+                          style={{ marginRight: "10px" }}
+                        />
+                        <p style={{ fontSize: "18px", width: "70px" }}>
+                          Structural Defects
+                        </p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div
-          className={`${styles.dark} ${styles.impacts}`}
-          style={{ width: "100%", height: "100%", position: "relative" }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              top: "100px",
-              left: "200px",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <img src="/assets/cloud-rain.png" width={100} />
-            <h1 style={{ fontSize: "70px", margin: "0 20px 0" }}>
-              {impactCount}
-            </h1>
-            <p style={{ width: "100px" }}>Hail Impact Detections</p>
-          </div>
 
+        { metalActive && (
           <div
-            style={{
-              position: "absolute",
-              top: "100px",
-              right: "250px",
-              display: "flex",
-            }}
+            className={`${styles.dark} ${styles.impacts}`}
+            style={{ width: "100%", height: "100%", position: "relative" }}
           >
             <div
               style={{
+                position: "absolute",
+                top: "100px",
+                left: "200px",
                 display: "flex",
                 alignItems: "center",
-                flexDirection: "column",
-                marginRight: "20px",
               }}
             >
-              <img src="/assets/roof.png" />
-              <img src="/assets/metal.png" />
+              <img src="/assets/cloud-rain.png" width={100} />
+              <h1 style={{ fontSize: "70px", margin: "0 20px 0" }}>
+                {impactCount}
+              </h1>
+              <p style={{ width: "100px" }}>Hail Impact Detections</p>
             </div>
-            <div>
-              <p style={{ margin: "30px 0" }}>SHINGLES</p>
-              <p style={{ margin: "30px 0" }}>SOFT METAL</p>
-            </div>
-          </div>
 
-          <img
-            src="/assets/grid-pattern.png"
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: "50%",
-              transform: "translate(-50%, 40%)",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              bottom: "2%",
-              left: "50%",
-              transform: "translate(-50%)",
-            }}
-          >
-            <model-viewer
-              src={map}
-              poster="/assets/models/poster.png"
-              alt='Roof'
-              ar
-              // loading='lazy'
-              camera-controls
-              autoplay
-            ></model-viewer>
+            <div
+              style={{
+                position: "absolute",
+                top: "100px",
+                right: "250px",
+                display: "flex",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  marginRight: "20px",
+                }}
+              >
+                <img src="/assets/roof.png" />
+                <img src="/assets/metal.png" />
+              </div>
+              <div>
+                <p style={{ margin: "30px 0" }}>SHINGLES</p>
+                <p style={{ margin: "30px 0" }}>SOFT METAL</p>
+              </div>
+            </div>
+
+            <img
+              src="/assets/grid-pattern.png"
+              style={{
+                position: "absolute",
+                bottom: 0,
+                left: "50%",
+                transform: "translate(-50%, 40%)",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                bottom: "2%",
+                left: "50%",
+                transform: "translate(-50%)",
+              }}
+            >
+              <model-viewer
+                src={map}
+                poster="/assets/models/poster.png"
+                alt='Roof'
+                ar
+                // loading='lazy'
+                camera-controls
+                autoplay
+              ></model-viewer>
+            </div>
+            <p
+              style={{
+                position: "absolute",
+                bottom: "15px",
+                left: "50%",
+                transform: "translate(-50%)",
+              }}
+            >
+              {address}
+            </p>
           </div>
-          <p
-            style={{
-              position: "absolute",
-              bottom: "15px",
-              left: "50%",
-              transform: "translate(-50%)",
-            }}
-          >
-            {address}
-          </p>
-        </div>
+        )}
     </>
   );
 }
