@@ -5,9 +5,11 @@ import styles from "./styles.module.scss";
 export default function RoofCustomization() {
   const [roofElement, setRoofElement] = useState(null);
   const [variant, setVariant] = useState("");
+  const [roof, setRoof] = useState("roof-shingle.glb");
 
   const setRoofModelVariant = () => {
     roofElement.variantName = variant;
+    setRoof(variant + ".glb")
   };
 
   useEffect(() => {
@@ -73,29 +75,29 @@ export default function RoofCustomization() {
               }}
             >
               <img
-                src="/assets/hickory-red.png"
-                className={styles.customize__texture}
-                onClick={() => setVariant("")}
+                src="/assets/hickory-red.jpeg"
+                className={`${styles.customize__texture} ${variant === "hickory-red" ? styles["customize__texture--active"] : ""}`}
+                onClick={() => setVariant("hickory-red")}
               />
               <img
-                src="/assets/oyster-grey.png"
-                className={styles.customize__texture}
-                onClick={() => setVariant("")}
+                src="/assets/oyster-grey.jpeg"
+                className={`${styles.customize__texture} ${variant === "oyster-grey" ? styles["customize__texture--active"] : ""}`}
+                onClick={() => setVariant("oyster-grey")}
               />
               <img
-                src="/assets/weathered-wood.png"
-                className={styles.customize__texture}
-                onClick={() => setVariant("")}
+                src="/assets/weathered-wood.jpeg"
+                className={`${styles.customize__texture} ${variant === "weathered-wood" ? styles["customize__texture--active"] : ""}`}
+                onClick={() => setVariant("weathered-wood")}
               />
               <img
-                src="/assets/shake-wood.png"
-                className={styles.customize__texture}
-                onClick={() => setVariant("")}
+                src="/assets/shake-wood.jpeg"
+                className={`${styles.customize__texture} ${variant === "shake-wood" ? styles["customize__texture--active"] : ""}`}
+                onClick={() => setVariant("shake-wood")}
               />
               <img
-                src="/assets/charcoal.png"
-                className={styles.customize__texture}
-                onClick={() => setVariant("")}
+                src="/assets/charcoal.jpeg"
+                className={`${styles.customize__texture} ${variant === "charcoal" ? styles["customize__texture--active"] : ""}`}
+                onClick={() => setVariant("charcoal")}
               />
             </div>
 
@@ -109,7 +111,7 @@ export default function RoofCustomization() {
           <div style={{ flex: "0 0 50%" }}>
             <model-viewer
               id="roof-model"
-              src="/assets/models/roof-shingle.glb"
+              src={`/assets/models/${roof}`}
               poster="/assets/models/poster.png"
               alt="Roof"
               ar

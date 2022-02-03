@@ -832,6 +832,10 @@
 
     background: #C4C4C4;
     transform: matrix(1, 0, 0, -1, 0, 0);
+
+    &--active {
+      border: 3px solid #075BBD;
+    }
   }
 
   &__button {
