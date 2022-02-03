@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "@google/model-viewer";
 import styles from "./styles.module.scss";
 
 export default function Hail({ record, setPaginationClass }) {

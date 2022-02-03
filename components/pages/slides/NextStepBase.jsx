@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
-export default function NextStepBase() {
+export default function NextStepBase({ record }) {
   const [analysisActive, setAnalysisActive] = useState(false);
   const [estimateActive, setEstimateActive] = useState(false);
   const [installActive, setinstallActive] = useState(false);
-  const [image, setImage] = useState("map-model.png");
+  const [image, setImage] = useState("");
+  const [map, setMap] = useState("");
 
   const onClickItem = (item) => {
     setAnalysisActive(item === "analysis");
@@ -22,6 +23,12 @@ export default function NextStepBase() {
       default: break;
     }
   }
+
+  useEffect(() => {
+    if (record) {
+      setMap(record.fields["3D-Model"][0]["url"]);
+    }
+  }, [record])
 
   return (
     <div className={`${styles.slide} ${styles["slide-about"]} ${styles.steps}`}>
@@ -114,7 +121,19 @@ export default function NextStepBase() {
             )}
           </div>
           <div style={{ flex: "0 0 50%", marginTop: "-50px" }}>
-            <img src={`/assets/${image}`} style={{ width: "100%" }} />
+            { !(analysisActive || estimateActive || installActive) && (
+              <model-viewer
+                src={map}
+                alt="3D model of map"
+                ar
+                // loading='lazy'
+                camera-controls
+                autoplay
+              ></model-viewer>
+            )}
+            { (analysisActive || estimateActive || installActive) && (
+              <img src={`/assets/${image}`} style={{ width: "100%" }} />
+            )}
           </div>
         </div>
       </div>

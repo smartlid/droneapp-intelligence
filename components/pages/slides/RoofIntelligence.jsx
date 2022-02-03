@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
-import "@google/model-viewer";
 
 export default function RoofIntelligence({ record, setPaginationClass }) {
   const [map, setMap] = useState("");
