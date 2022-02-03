@@ -1,4 +1,5 @@
-.slide, .slide-home {
+.slide,
+.slide-home {
   width: 100%;
   // height: 100%;
   max-width: 100vw;
@@ -798,7 +799,7 @@
     margin: 20px 0;
     font-weight: bolder;
     font-size: 70px;
-    color: #075BBD;
+    color: #075bbd;
     line-height: 100%;
     text-align: left;
 
@@ -825,7 +826,7 @@
     width: 770px;
     height: 770px;
     transform: translateX(-12.5%);
-    background: #F8F8F8;
+    background: #f8f8f8;
     border-radius: 50%;
   }
 
@@ -836,11 +837,14 @@
     overflow: hidden;
     margin-right: 20px;
 
-    background: #C4C4C4;
+    background: #c4c4c4;
     transform: matrix(1, 0, 0, -1, 0, 0);
 
     &--active {
-      border: 3px solid #075BBD;
+      box-shadow: 0px 4px 50px 25px rgba(0, 0, 0, 0.08),
+        0px -4px 50px 25px rgba(0, 0, 0, 0.08),
+        4px 0px 50px 25px rgba(0, 0, 0, 0.08),
+        -4px 0px 50px 25px rgba(0, 0, 0, 0.08);
     }
   }
 
@@ -850,10 +854,31 @@
     background: #000000;
     color: #ffffff;
     border-radius: 19px;
+    border: none;
 
     font-weight: bolder;
     font-size: 24px;
     line-height: 31px;
     text-align: center;
+
+    &--hickory-red {
+      background: #6f4736;
+    }
+
+    &--oyster-grey {
+      background: #5d6165;
+    }
+
+    &--weathered-wood {
+      background: #4c4733;
+    }
+
+    &--shake-wood {
+      background: #a18867;
+    }
+
+    &--charcoal {
+      background: #1f211c;
+    }
   }
 }

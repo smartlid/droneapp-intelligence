@@ -3,13 +3,21 @@ import { Widget } from "@typeform/embed-react";
 import styles from "./styles.module.scss";
 
 export default function RoofCustomization() {
-  const [roofElement, setRoofElement] = useState(null);
-  const [variant, setVariant] = useState("");
-  const [roof, setRoof] = useState("roof-shingle.glb");
+  const HICKORY_RED = "hickory-red";
+  const CHARCOAL = "charcoal";
+  const OYSTER_GREY = "oyster-grey";
+  const WEATHERED_WOOD = "weathered-wood";
+  const SHAKE_WOOD = "shake-wood";
 
-  const setRoofModelVariant = () => {
+  const [roofElement, setRoofElement] = useState(null);
+  const [variant, setVariant] = useState(WEATHERED_WOOD);
+  const [btnColor, setBtnColor] = useState("");
+  const [roof, setRoof] = useState(`${WEATHERED_WOOD}.glb`);
+
+  const setRoofModelVariant = (color) => {
     roofElement.variantName = variant;
-    setRoof(variant + ".glb")
+    setVariant(color);
+    setRoof(color + ".glb");
   };
 
   useEffect(() => {
@@ -76,34 +84,74 @@ export default function RoofCustomization() {
             >
               <img
                 src="/assets/hickory-red.jpeg"
-                className={`${styles.customize__texture} ${variant === "hickory-red" ? styles["customize__texture--active"] : ""}`}
-                onClick={() => setVariant("hickory-red")}
+                className={`${styles.customize__texture} ${
+                  variant === HICKORY_RED
+                    ? styles["customize__texture--active"]
+                    : ""
+                }`}
+                onClick={() => setRoofModelVariant(HICKORY_RED)}
               />
               <img
                 src="/assets/oyster-grey.jpeg"
-                className={`${styles.customize__texture} ${variant === "oyster-grey" ? styles["customize__texture--active"] : ""}`}
-                onClick={() => setVariant("oyster-grey")}
+                className={`${styles.customize__texture} ${
+                  variant === OYSTER_GREY
+                    ? styles["customize__texture--active"]
+                    : ""
+                }`}
+                onClick={() => setRoofModelVariant(OYSTER_GREY)}
               />
               <img
                 src="/assets/weathered-wood.jpeg"
-                className={`${styles.customize__texture} ${variant === "weathered-wood" ? styles["customize__texture--active"] : ""}`}
-                onClick={() => setVariant("weathered-wood")}
+                className={`${styles.customize__texture} ${
+                  variant === WEATHERED_WOOD
+                    ? styles["customize__texture--active"]
+                    : ""
+                }`}
+                onClick={() => setRoofModelVariant(WEATHERED_WOOD)}
               />
               <img
                 src="/assets/shake-wood.jpeg"
-                className={`${styles.customize__texture} ${variant === "shake-wood" ? styles["customize__texture--active"] : ""}`}
-                onClick={() => setVariant("shake-wood")}
+                className={`${styles.customize__texture} ${
+                  variant === SHAKE_WOOD
+                    ? styles["customize__texture--active"]
+                    : ""
+                }`}
+                onClick={() => setRoofModelVariant(SHAKE_WOOD)}
               />
               <img
                 src="/assets/charcoal.jpeg"
-                className={`${styles.customize__texture} ${variant === "charcoal" ? styles["customize__texture--active"] : ""}`}
-                onClick={() => setVariant("charcoal")}
+                className={`${styles.customize__texture} ${
+                  variant === CHARCOAL
+                    ? styles["customize__texture--active"]
+                    : ""
+                }`}
+                onClick={() => setRoofModelVariant(CHARCOAL)}
               />
             </div>
 
             <button
-              className={styles.customize__button}
-              onClick={() => setRoofModelVariant()}
+              className={`${styles.customize__button} ${
+                btnColor === HICKORY_RED
+                  ? styles["customize__button--hickory-red"]
+                  : ""
+              } ${
+                btnColor === OYSTER_GREY
+                  ? styles["customize__button--oyster-grey"]
+                  : ""
+              } ${
+                btnColor === WEATHERED_WOOD
+                  ? styles["customize__button--weathered-wood"]
+                  : ""
+              } ${
+                btnColor === SHAKE_WOOD
+                  ? styles["customize__button--shake-wood"]
+                  : ""
+              } ${
+                btnColor === CHARCOAL
+                  ? styles["customize__button--charcoal"]
+                  : ""
+              }`}
+              onClick={() => setBtnColor(variant)}
             >
               CHOOSE STYLE
             </button>
