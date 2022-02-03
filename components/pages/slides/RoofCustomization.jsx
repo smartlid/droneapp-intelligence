@@ -64,7 +64,7 @@ export default function RoofCustomization() {
                 color: "#564942",
               }}
             >
-              WEATHERED WOOD
+              {variant.split("-").join(" ").toUpperCase()}
             </h4>
 
             <div
