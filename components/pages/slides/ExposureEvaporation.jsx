@@ -5,21 +5,21 @@ export default function ExposureEvaporation({ record }) {
   const [evaporationActive, setEvaporationActive] = useState(true);
   const [buildActive, setBuildActive] = useState(false);
   const [deckingActive, setDeckingActive] = useState(false);
-  const [image, setImage] = useState("evaporation.png");
+  const [image, setImage] = useState("evaporation");
   const [roof, setRoof] = useState("");
 
   const onClickItem = (item) => {
     setEvaporationActive(item === "evaporation");
-    setBuildActive(item === "build");
+    setBuildActive(item === "build-up");
     setDeckingActive(item === "decking");
 
     switch (item) {
       case "evaporation":
-        setImage("evaporation.png"); break;
-      case "build":
-        setImage("evaporation-build.png"); break;
+        setImage("evaporation"); break;
+      case "build-up":
+        setImage("build-up"); break;
       case "decking":
-        setImage("evaporation.png"); break;
+        setImage("decking"); break;
       default: break;
     }
   }
@@ -108,7 +108,7 @@ export default function ExposureEvaporation({ record }) {
   
   return (
     <>
-      <div className={`${styles.slide} ${styles.dark}`}>
+      <div className={`${styles.slide} ${styles.dark} ${styles.exposure}`}>
         <img
           src="/assets/remote-roofing-logo-white.png"
           alt="logo"
@@ -136,7 +136,17 @@ export default function ExposureEvaporation({ record }) {
             }}
           >
             <div style={{ flex: "0 0 50%" }}>
-              <img src={`/assets/${image}`} width="100%" />
+              {/* <img src={`/assets/${image}`} width="100%" /> */}
+              <model-viewer
+                src={`/assets/models/${image}/scene.gltf`}
+                poster="/assets/models/poster.png"
+                alt="Roof"
+                ar
+                // loading='lazy'
+                camera-controls
+                camera-orbit="-578.6deg 86.78deg auto"
+                auto-rotate
+              ></model-viewer>
             </div>
             <div
               style={{
@@ -148,7 +158,7 @@ export default function ExposureEvaporation({ record }) {
                 <div className={`${styles.exposure__title} ${evaporationActive ? styles.active : ""}`} onClick={() => onClickItem("evaporation")}>
                   Evaporation
                 </div>
-                <div className={`${styles.exposure__title} ${buildActive ? styles.active : ""}`} onClick={() => onClickItem("build")}>Build up</div>
+                <div className={`${styles.exposure__title} ${buildActive ? styles.active : ""}`} onClick={() => onClickItem("build-up")}>Build up</div>
                 <div className={`${styles.exposure__title} ${deckingActive ? styles.active : ""} ${styles.last}`} onClick={() => onClickItem("decking")}>
                   Decking
                 </div>
