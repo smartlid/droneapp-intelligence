@@ -1,9 +1,9 @@
-.slide {
+.slide, .slide-home {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   max-width: 100vw;
   min-height: 100vh;
-  overflow: hidden visible;
+  overflow: auto;
   position: relative;
   z-index: -2;
 }
@@ -20,7 +20,7 @@
   content: "";
   position: absolute;
   width: 10px;
-  height: 6%;
+  height: 80px;
   background: linear-gradient(135.11deg, #0a8ede 3.78%, #075bbd 94.58%);
 }
 
@@ -92,9 +92,9 @@
 
 .home {
   &__logo {
-    width: 200px;
-    height: 70px;
-    margin: 60px 0 0 60px;
+    width: 250px;
+    height: 105px;
+    margin: 80px 0 0 70px;
 
     opacity: 0;
     animation-fill-mode: forwards;
@@ -102,9 +102,9 @@
   }
 
   &__title {
-    margin: 40px 0 0 60px;
+    margin: 80px 0 0 70px;
     font-weight: bolder;
-    font-size: 90px;
+    font-size: 120px;
     line-height: 100%;
     text-align: left;
 
@@ -112,7 +112,7 @@
   }
 
   &__address {
-    margin: 10px 0 0 65px;
+    margin: 30px 0 0 75px;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -134,8 +134,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 100px;
-    height: 40px;
+    width: 160px;
+    height: 120px;
 
     animation-delay: 1s;
   }
