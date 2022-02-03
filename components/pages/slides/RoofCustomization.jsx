@@ -18,6 +18,7 @@ export default function RoofCustomization() {
     roofElement.variantName = variant;
     setVariant(color);
     setRoof(color + ".glb");
+    setBtnColor("");
   };
 
   useEffect(() => {

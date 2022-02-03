@@ -36,7 +36,7 @@ export default function ProductShingle() {
         />
         <div className={styles["product__roof-scheme-area"]}>
           <img
-            src="/assets/drone.png"
+            src="/assets/drone2.png"
             alt="drone"
             className={`${styles.product__drone} fade-in-top-down`}
           />
@@ -63,7 +63,7 @@ export default function ProductShingle() {
       </div>
       <div className={styles.product__right}>
         <>
-          <h2 className={`${styles.product__title} fade-in-top-down`}>
+          <h1 className={`${styles.product__title} fade-in-top-down`}>
             <span style={{ color: "#075BBD" }}>AI</span> Roof
             <br />
             Assessment
@@ -72,24 +72,27 @@ export default function ProductShingle() {
               alt="logo"
               className={`${styles["product__title-logo"]} fade-in-top-down`}
             />
-          </h2>
-          <div style={{ border: "2px solid #E5E5E5", width: "100%" }}></div>
-          <h6 className={`${styles.product__description} fade-in-top-down`}>
+          </h1>
+          <div style={{ border: "2px solid #E5E5E5", background: "#E5E5E5", width: "100%" }}></div>
+          <p className={`${styles.product__description} fade-in-top-down`}>
             A complete analysis and breakdown of the health of your roof
-          </h6>
+          </p>
           <div
             style={{
               display: "flex",
               width: "100%",
               justifyContent: "space-between",
               alignItems: "center",
+              marginTop: "45px",
             }}
           >
             <p
               style={{
                 color: "#075BBD",
-                fontSize: "50px",
-                fontWeight: "bold",
+                fontWeight: "bolder",
+                fontSize: "60px",
+                lineHeight: "78px",
+                margin: 0,
                 textDecorationLine: "line-through",
               }}
             >
@@ -103,9 +106,10 @@ export default function ProductShingle() {
                 borderRadius: "15px",
                 border: "none",
                 color: "white",
-                padding: "16px 32px",
+                padding: "24px 54px",
                 fontStyle: "bold",
-                fontSize: "14px",
+                fontSize: "18px",
+                lineHeight: "24px",
               }}
             >
               LAUNCH REPORT
