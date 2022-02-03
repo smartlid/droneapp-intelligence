@@ -13,7 +13,7 @@
   content: "";
   position: absolute;
   width: 10px;
-  height: 25%;
+  height: 300px;
   background: linear-gradient(135.11deg, #0a8ede 3.78%, #075bbd 94.58%);
 }
 
@@ -48,7 +48,7 @@
   left: 0;
   right: 0;
   top: 0;
-  height: 350px;
+  height: 614px;
   background: linear-gradient(180deg, #000000 39.58%, rgba(0, 0, 0, 0) 100%);
   z-index: -1;
 }
@@ -293,10 +293,10 @@
 
   &__logo {
     position: absolute;
-    width: 130px;
-    height: 50px;
-    left: 60px;
-    top: 40px;
+    width: 155px;
+    height: 84px;
+    left: 70px;
+    top: 37px;
 
     opacity: 0;
     animation-fill-mode: forwards;
@@ -304,25 +304,34 @@
   }
 
   &__title {
-    margin: 100px 0 0 70px;
+    margin: 130px 0 0 83px;
     font-weight: bolder;
-    font-size: 70px;
-    line-height: 100%;
+    font-size: 96px;
+    line-height: 125px;
     text-align: left;
 
     animation-delay: 0.7s;
   }
 
   &__address {
-    margin: 10px 0 0 70px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 47px;
-    min-height: 47px;
+    margin: 0 0 0 88px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
     color: #e5e5e5;
 
     animation-delay: 0.9s;
+  }
+
+  &__image {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
   }
 }
 
