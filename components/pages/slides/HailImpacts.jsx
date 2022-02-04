@@ -15,8 +15,8 @@ export default function Hail({ record }) {
   const [metalActive, setMetalActive] = useState(false);
   const [magnifiedImage, setMagnifiedImage] = useState("");
 
-  const onClickImage = () => {
-    setIndex((oldIndex) => (oldIndex + 1) % 3);
+  const onClickImage = (newIndex) => {
+    setIndex(newIndex);
   };
 
   const zoomer = function () {
@@ -159,19 +159,19 @@ export default function Hail({ record }) {
                     className={`${styles["impacts__btn-circle"]} ${
                       index === 0 ? styles["impacts__btn-circle--active"] : ""
                     }`}
-                    onClick={onClickImage}
+                    onClick={() => onClickImage(0)}
                   ></span>
                   <span
                     className={`${styles["impacts__btn-circle"]} ${
                       index === 1 ? styles["impacts__btn-circle--active"] : ""
                     }`}
-                    onClick={onClickImage}
+                    onClick={() => onClickImage(1)}
                   ></span>
                   <span
                     className={`${styles["impacts__btn-circle"]} ${
                       index === 2 ? styles["impacts__btn-circle--active"] : ""
                     }`}
-                    onClick={onClickImage}
+                    onClick={() => onClickImage(2)}
                   ></span>
                 </div>
               )}
