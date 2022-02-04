@@ -15,7 +15,7 @@ export default function Insurance({ setPaginationClass }) {
       />
 
       <div className={styles.content} style={{ marginRight: 0 }}>
-        <div style={{ marginBottom: "75px", width: "40%" }}>
+        <div style={{ marginBottom: "75px", width: "50%" }}>
           <div
             style={{
               display: "flex",
@@ -29,21 +29,20 @@ export default function Insurance({ setPaginationClass }) {
           >
             <img
               src="/assets/rain-button.png"
-              width={70}
+              width={90}
               style={{ marginRight: "20px" }}
             />
-            <h1 style={{ fontSize: "70px", fontStyle: "bolder", margin: 0 }}>
+            <h1 className={styles.title}>
               INSURANCE
             </h1>
           </div>
           <p
             style={{
-              margin: 0,
               opacity: 0,
               animationFillMode: "forwards",
               animationDelay: ".9s",
             }}
-            className="fade-in-top-down"
+            className={`${styles["sub-title"]} fade-in-top-down`}
           >
             Based on cause and extent of damage on the roof, your insurance
             carrier can cover the cost of replacement

@@ -166,16 +166,16 @@ export default function Hail({ setPaginationClass }) {
                   padding: "0 50px",
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "center",
+                  alignItems: "left",
                   justifyContent: "center",
                 }}
               >
                 <h3
-                  style={{ fontSize: "48px", fontStyle: "bolder", margin: 0 }}
+                  style={{ fontSize: "68px", lineHeight: "89px", fontWeight: "bold", margin: 0 }}
                 >
                   HAIL IMPACTS
                 </h3>
-                <p>
+                <p style={{ fontSize: "24px", lineHeight: "31px", fontWeight: 400, color: "#c5c5c5" }}>
                   Classified as indentations on the surface of the shingle as a
                   causation of hail
                 </p>

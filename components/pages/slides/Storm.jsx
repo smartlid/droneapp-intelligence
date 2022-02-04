@@ -25,8 +25,8 @@ export default function Storm({ setPaginationClass }) {
           <img
             src="/assets/map-button.png"
             alt="map-image"
-            width="70"
-            height="70"
+            width="89"
+            height="89"
             className="fade-in-top-down"
             style={{ animationDelay: ".5s" }}
           />

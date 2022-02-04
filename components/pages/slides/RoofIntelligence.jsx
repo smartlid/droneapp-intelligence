@@ -25,25 +25,21 @@ export default function RoofIntelligence({ record, setPaginationClass }) {
       <div className={styles.content}>
         <h1
           style={{
-            fontSize: "70px",
-            fontStyle: "bolder",
-            margin: "0 0 15px 0",
             opacity: 0,
             animationFillMode: "forwards",
             animationDelay: ".7s",
           }}
-          className="fade-in-top-down"
+          className={`${styles.title} fade-in-top-down`}
         >
           Roof Intelligence
         </h1>
         <p
           style={{
-            margin: 0,
             opacity: 0,
             animationFillMode: "forwards",
             animationDelay: "1s",
           }}
-          className="fade-in-top-down"
+          className={`${styles["sub-title"]} fade-in-top-down`}
         >
           {`A complete breakdown of your roof’s health`}
         </p>
@@ -53,7 +49,6 @@ export default function RoofIntelligence({ record, setPaginationClass }) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginTop: "120px",
           }}
         >
           {/* <img src="/assets/map-model.png" width="60%" /> */}

@@ -13,7 +13,7 @@
   content: "";
   position: absolute;
   width: 10px;
-  height: 300px;
+  height: 400px;
   background: linear-gradient(135.11deg, #0a8ede 3.78%, #075bbd 94.58%);
 }
 
@@ -76,18 +76,32 @@
 
 .logo {
   position: absolute;
-  width: 130px;
-  height: 50px;
-  left: 60px;
-  top: 45px;
+  width: 160px;
+  height: 90px;
+  left: 70px;
+  top: 37px;
 
   opacity: 0;
   animation-fill-mode: forwards;
   animation-delay: 0.5s;
 }
 
+.title {
+  font-weight: bolder;
+  font-size: 96px;
+  margin: 0;
+}
+
+.sub-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  margin: 20px 0 0 0;
+  color: #c5c5c5;
+}
+
 .content {
-  margin: 150px 75px 0;
+  margin: 150px 90px 0;
   height: calc(100% - 100px);
 }
 
@@ -340,7 +354,7 @@
   background: #000000;
 
   &__content {
-    margin: 100px 0 0;
+    margin: 180px 0 0;
     padding: 0 80px;
     display: flex;
     flex-wrap: nowrap;
@@ -349,10 +363,10 @@
 
   &__logo {
     position: absolute;
-    width: 130px;
-    height: 50px;
-    left: 60px;
-    top: 40px;
+    width: 155px;
+    height: 84px;
+    left: 70px;
+    top: 37px;
 
     opacity: 0;
     animation-fill-mode: forwards;
@@ -362,7 +376,7 @@
   &__title {
     margin: 0;
     font-weight: bolder;
-    font-size: 70px;
+    font-size: 96px;
     line-height: 100%;
     text-align: left;
 
@@ -370,9 +384,11 @@
   }
 
   &__description {
-    margin: 10px 0 0 0;
-    font-size: 18px;
-    line-height: 100%;
+    margin: 20px 0 0 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #c5c5c5;
     text-align: left;
 
     animation-delay: 0.9s;
@@ -397,7 +413,7 @@
   background: #000000;
 
   &__content {
-    margin: 100px 0 0;
+    margin: 180px 0 0;
     padding: 0 80px;
     display: flex;
     flex-wrap: nowrap;
@@ -406,10 +422,10 @@
 
   &__logo {
     position: absolute;
-    width: 130px;
-    height: 50px;
-    left: 60px;
-    top: 40px;
+    width: 155px;
+    height: 84px;
+    left: 70px;
+    top: 37px;
 
     opacity: 0;
     animation-fill-mode: forwards;
@@ -419,7 +435,7 @@
   &__title {
     margin: 0;
     font-weight: bolder;
-    font-size: 70px;
+    font-size: 92px;
     line-height: 100%;
     text-align: left;
 
@@ -427,9 +443,11 @@
   }
 
   &__description {
-    margin: 10px 0 0 0;
-    font-size: 18px;
-    line-height: 100%;
+    margin: 20px 0 0 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #c5c5c5;
     text-align: left;
 
     animation-delay: 0.9s;
