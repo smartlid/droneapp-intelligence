@@ -38,13 +38,12 @@ export default function Hail({ record, setPaginationClass }) {
       >
         <img
           src="/assets/remote-roofing-logo-white.png"
-          width={180}
-          height={120}
+          width={220}
+          height={140}
           style={{ marginRight: "30px" }}
         />
         <h1
-          className="fade-in-top-down"
-          style={{ fontSize: "70px", fontStyle: "bolder", margin: 0 }}
+          className={`${styles.title} fade-in-top-down`}
         >
           Roof Intelligence
         </h1>
@@ -59,7 +58,7 @@ export default function Hail({ record, setPaginationClass }) {
           alignItems: "center",
         }}
       >
-        <p style={{ width: "100px", marginRight: "20px" }}>MOISTURE RISK</p>
+        <p className={styles["sub-title"]} style={{ width: "120px", margin: "0 20px 0 0" }}>MOISTURE RISK</p>
         <img src={roof} width={100} style={{ borderRadius: "10px" }} />
       </div>
 
@@ -73,9 +72,9 @@ export default function Hail({ record, setPaginationClass }) {
           alignItems: "center",
         }}
       >
-        <img src="/assets/cloud-rain.png" width={100} />
-        <h1 style={{ fontSize: "70px", margin: "0 20px 0" }}>{impactCount}</h1>
-        <p style={{ width: "100px" }}>Hail Impact Detections</p>
+        <img src="/assets/cloud-rain.png" width={77} />
+        <h1 style={{ fontWeight: "bold", fontSize: "72px", lineHeight: "94px", color: "#ACD7FF", margin: "0 20px 0" }}>{impactCount}</h1>
+        <p className={styles["sub-title"]} style={{ width: "130px", margin: 0 }}>Hail Impact Detections</p>
       </div>
 
       <div
@@ -94,12 +93,12 @@ export default function Hail({ record, setPaginationClass }) {
             marginRight: "20px",
           }}
         >
-          <img src="/assets/roof.png" />
-          <img src="/assets/metal.png" />
+          <img src="/assets/roof.png" width={50} />
+          <img src="/assets/metal.png" width={50} />
         </div>
         <div>
-          <p style={{ margin: "30px 0" }}>SHINGLES</p>
-          <p style={{ margin: "30px 0" }}>SOFT METAL</p>
+          <p className={styles["sub-title"]} style={{ margin: "15px 0" }}>SHINGLES</p>
+          <p className={styles["sub-title"]} style={{ margin: "15px 0" }}>SOFT METAL</p>
         </div>
       </div>
 
@@ -109,14 +108,15 @@ export default function Hail({ record, setPaginationClass }) {
           position: "absolute",
           bottom: 0,
           left: "50%",
-          transform: "translate(-50%, 40%)",
+          height: "300px",
+          transform: "translateX(-50%)",
+          width: "100%"
         }}
       />
       <div
-        src="/assets/map-model.png"
         style={{
           position: "absolute",
-          bottom: "2%",
+          bottom: "30px",
           left: "50%",
           transform: "translate(-50%)",
         }}
@@ -136,6 +136,11 @@ export default function Hail({ record, setPaginationClass }) {
           bottom: "15px",
           left: "50%",
           transform: "translate(-50%)",
+          fontWeight: 700,
+          fontSize: "24px",
+          lineHeight: "31px",
+          color: "#c5c5c5",
+          margin: 0
         }}
       >
         {address}
