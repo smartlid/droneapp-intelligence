@@ -552,11 +552,12 @@
   }
 
   &__title {
-    font-size: 24px;
-    font-weight: bolder;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
     margin: 20px 0;
     position: relative;
-    color: #505050;
+    color: #868686;
     cursor: pointer;
 
     &::before {
@@ -568,7 +569,7 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: #505050;
+      background: #868686;
     }
 
     &::after {
@@ -577,12 +578,13 @@
       right: -36px;
       top: 50%;
       border: 0.5px solid;
-      height: 50px;
-      border-color: #505050;
+      height: 55px;
+      border-color: #868686;
     }
 
     &.active {
-      font-size: 60px;
+      font-size: 48px;
+      line-height: 62.5px;
       color: #fff;
 
       &::before {

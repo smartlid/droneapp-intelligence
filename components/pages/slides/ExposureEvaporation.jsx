@@ -47,6 +47,7 @@ export default function ExposureEvaporation({ record }) {
       slider = document.createElement("DIV");
       slider.setAttribute("class", "img-comp-slider");
       slider.setAttribute("id", "img-comp-slider");
+      slider.innerHTML += "< >"
       img.parentElement.insertBefore(slider, img);
       slider.style.top = h / 2 - slider.offsetHeight / 2 + "px";
       slider.style.left = w / 2 - slider.offsetWidth / 2 + "px";
@@ -117,12 +118,11 @@ export default function ExposureEvaporation({ record }) {
 
         <div className={styles.content} style={{ textAlign: "right" }}>
           <h1
-            className="fade-in-top-down"
-            style={{ fontSize: "70px", fontStyle: "bolder", margin: "0 0 10px" }}
+            className={`${styles.title} fade-in-top-down`}
           >
             Moisture Exposure
           </h1>
-          <p className="fade-in-top-down">
+          <p className={`${styles["sub-title"]} fade-in-top-down`}>
             The thermal composition and condition of your roof
           </p>
 
@@ -178,14 +178,15 @@ export default function ExposureEvaporation({ record }) {
               <h1
                 className="fade-in-top-down"
                 style={{
-                  fontSize: "70px",
-                  fontStyle: "bolder",
+                  fontSize: "72px",
+                  fontWeight: "bold",
+                  lineHeight: "94px",
                   margin: "0 0 10px",
                 }}
               >
                 Thermal Scan
               </h1>
-              <p className="fade-in-top-down">
+              <p className={`${styles["sub-title"]} fade-in-top-down`}>
                 A thermal depth-vision scan of the roof to detect risks for
                 moisture exposure.
               </p>
@@ -216,8 +217,8 @@ export default function ExposureEvaporation({ record }) {
                   paddingTop: "50px",
                 }}
               >
-                <h3>HEALTHY ROOF</h3>
-                <h3>MY ROOF</h3>
+                <p style={{ fontWeight: "bold", fontSize: "24px", lineHeight: "47px", color: "#c5c5c5", margin: "0 0 0 -50px" }}>HEALTHY ROOF</p>
+                <p style={{ fontWeight: "bold", fontSize: "24px", lineHeight: "47px", color: "#c5c5c5", margin: "0 -20px 0 0" }}>MY ROOF</p>
               </div>
             </div>
           </div>
