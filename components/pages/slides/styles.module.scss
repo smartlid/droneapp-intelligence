@@ -540,6 +540,20 @@
     color: #c5c5c5;
     margin: 0;
   }
+
+  &__btn-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #86868680;
+    margin-right: 20px;
+
+    &--active {
+      width: 15px;
+      height: 15px;
+      background: #ffffff;
+    }
+  }
 }
 
 .exposure {
