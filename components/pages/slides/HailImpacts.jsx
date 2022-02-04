@@ -13,10 +13,49 @@ export default function Hail({ record }) {
   const [impactActive, setImpactActive] = useState(true);
   const [granularActive, setGranularActive] = useState(false);
   const [metalActive, setMetalActive] = useState(false);
+  const [magnifiedImage, setMagnifiedImage] = useState("");
 
   const onClickImage = () => {
     setIndex((oldIndex) => (oldIndex + 1) % 3);
   };
+
+  const zoomer = function () {
+    document.querySelector('#img-zoomer-box')
+      .addEventListener('mousemove', function(e) {
+
+      let original = document.querySelector('#img-1');
+      console.log("Original", original.offsetWidth);
+      let magnified = document.querySelector('#img-2'),
+          style = magnified.style,
+          x = e.offsetX - this.offsetLeft + 100,
+          y = e.offsetY - this.offsetTop + 170,
+          imgWidth = original.offsetWidth,
+          imgHeight = original.offsetHeight,
+          xperc = ((x/imgWidth) * 100),
+          yperc = ((y/imgHeight) * 100);
+          
+      //lets user scroll past right edge of image
+      if(x > (.01 * imgWidth)) {
+        xperc += (.15 * xperc);
+      };
+  
+      //lets user scroll past bottom edge of image
+      if(y >= (.01 * imgHeight)) {
+        yperc += (.15 * yperc);
+      };
+  
+      style.backgroundPositionX = (xperc - 9) + '%';
+      style.backgroundPositionY = (yperc - 9) + '%';
+  
+      style.left = (x - 180) + 'px';
+      style.top = (y - 180) + 'px';
+  
+    }, false);
+  };
+
+  useEffect(() => {
+    zoomer();
+  }, [])
 
   useEffect(() => {
     if (record) {
@@ -33,6 +72,22 @@ export default function Hail({ record }) {
       setMetalDamage(record.fields["SM-1"][0]["url"]);
     }
   }, [record]);
+
+  useEffect(() => {
+    if (granularActive) {
+      setMagnifiedImage(granularDamage);
+    }
+
+    if (metalActive) {
+      setMagnifiedImage(metalDamage);
+    }
+  }, [granularActive, metalActive])
+
+  useEffect(() => {
+    if (impactActive && hailImpacts.length) {
+      setMagnifiedImage(hailImpacts[index]);
+    }
+  }, [impactActive, hailImpacts])
 
   const onClickItem = (item) => {
     setImpactActive(item === "impact");
@@ -59,9 +114,10 @@ export default function Hail({ record }) {
                 height: "100%",
               }}
             >
-              <div style={{ flex: "0 0 45%" }}>
+              <div style={{ flex: "0 0 45%" }} id="img-zoomer-box">
                 { impactActive && (
                   <img
+                    id="img-1"
                     src={hailImpacts.length && hailImpacts[index]}
                     width="100%"
                     style={{ borderRadius: "30px" }}
@@ -69,11 +125,12 @@ export default function Hail({ record }) {
                   />
                 )}
                 { granularActive && (
-                  <img src={granularDamage} width="100%" style={{ borderRadius: "30px" }} />
+                  <img id="img-1" src={granularDamage} width="100%" style={{ borderRadius: "30px" }} />
                 )}
                 { metalActive && (
-                  <img src={metalDamage} width="100%" style={{ borderRadius: "30px" }} />
+                  <img id="img-1" src={metalDamage} width="100%" style={{ borderRadius: "30px" }} />
                 )}
+                <div id="img-2" style={{ background: `url(${magnifiedImage})` }}></div>
               </div>
               <div
                 style={{

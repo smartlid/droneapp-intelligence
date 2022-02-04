@@ -119,7 +119,7 @@ export default function Hail({ setPaginationClass }) {
                       </div>
                     </div>
                   </div>
-                  <div style={{ flex: "0 0" }}>
+                  <div style={{ flex: "0 0", position: "relative" }}>
                     <img
                       src="assets/cloud.png"
                       style={{ marginTop: "-70px" }}
@@ -128,15 +128,26 @@ export default function Hail({ setPaginationClass }) {
                       src="assets/roof-scheme.png"
                       style={{ margin: "80px 0 0 -50px", width: "100%" }}
                     />
+                    <img
+                      src="assets/roof-tile.png"
+                      style={{ position: "absolute", left: "40%", top: "60%" }}
+                    />
+                    <hr style={{
+                        position: "absolute",
+                        width: "550px",
+                        border: "dashed #E5E5E5",
+                        borderWidth: "2px 0 0",
+                        transform: "rotate(-45deg) translate(-175px, -140px)",
+                      }}
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className={`${styles.slide} ${styles["hail-slide"]} ${styles.hail}`}>
+          
           {/* Roof Hail Impacts */}
-          <div className={styles.hail__content} style={{ margin: "0" }}>
+          <div className={styles.hail__content}>
             <div
               style={{
                 margin: "0 55px 0 34.5px",
