@@ -103,7 +103,7 @@ export default function Hail({ record }) {
                           width={30}
                           style={{ marginRight: "10px" }}
                         />
-                        <p style={{ fontSize: "18px", width: "70px" }}>
+                        <p className={styles["impacts__sub-title"]}>
                           Cracked Shingles
                         </p>
                       </div>
@@ -113,7 +113,7 @@ export default function Hail({ record }) {
                           width={30}
                           style={{ marginRight: "10px" }}
                         />
-                        <p style={{ fontSize: "18px", width: "70px" }}>
+                        <p className={styles["impacts__sub-title"]}>
                           Granule Reduction
                         </p>
                       </div>
@@ -135,7 +135,7 @@ export default function Hail({ record }) {
                           width={30}
                           style={{ marginRight: "10px" }}
                         />
-                        <p style={{ fontSize: "18px", width: "70px" }}>
+                        <p className={styles["impacts__sub-title"]}>
                           Bruised Shingles
                         </p>
                       </div>
@@ -145,7 +145,7 @@ export default function Hail({ record }) {
                           width={30}
                           style={{ marginRight: "10px" }}
                         />
-                        <p style={{ fontSize: "18px", width: "70px" }}>
+                        <p className={styles["impacts__sub-title"]}>
                           Gutter Build Up
                         </p>
                       </div>
@@ -169,7 +169,7 @@ export default function Hail({ record }) {
                           width={30}
                           style={{ marginRight: "10px" }}
                         />
-                        <p style={{ fontSize: "18px", width: "70px" }}>
+                        <p className={styles["impacts__sub-title"]}>
                           Improper Ventillation
                         </p>
                       </div>
@@ -179,7 +179,7 @@ export default function Hail({ record }) {
                           width={30}
                           style={{ marginRight: "10px" }}
                         />
-                        <p style={{ fontSize: "18px", width: "70px" }}>
+                        <p className={styles["impacts__sub-title"]}>
                           Structural Defects
                         </p>
                       </div>
@@ -199,23 +199,23 @@ export default function Hail({ record }) {
             <div
               style={{
                 position: "absolute",
-                top: "100px",
+                top: "50px",
                 left: "200px",
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <img src="/assets/cloud-rain.png" width={100} />
-              <h1 style={{ fontSize: "70px", margin: "0 20px 0" }}>
+              <img src="/assets/cloud-rain.png" width={118} />
+              <h1 style={{ fontWeight: "bold", fontSize: "120px", lineHeight: "156px", color: "#ACD7FF", margin: "0 20px 0" }}>
                 {impactCount}
               </h1>
-              <p style={{ width: "100px" }}>Hail Impact Detections</p>
+              <p style={{ fontWeight: 400, fontSize: "24px", lineHeight: "31px", color: "#c5c5c5", margin: 0, width: "140px" }}>Hail Impact Detections</p>
             </div>
 
             <div
               style={{
                 position: "absolute",
-                top: "100px",
+                top: "50px",
                 right: "250px",
                 display: "flex",
               }}
@@ -228,12 +228,12 @@ export default function Hail({ record }) {
                   marginRight: "20px",
                 }}
               >
-                <img src="/assets/roof.png" />
-                <img src="/assets/metal.png" />
+                <img src="/assets/roof.png" width={80} />
+                <img src="/assets/metal.png" width={80} />
               </div>
               <div>
-                <p style={{ margin: "30px 0" }}>SHINGLES</p>
-                <p style={{ margin: "30px 0" }}>SOFT METAL</p>
+                <p style={{ fontWeight: 400, fontSize: "24px", lineHeight: "31px", color: "#c5c5c5",margin: "36px 0" }}>SHINGLES</p>
+                <p style={{ fontWeight: 400, fontSize: "24px", lineHeight: "31px", color: "#c5c5c5",margin: "36px 0" }}>SOFT METAL</p>
               </div>
             </div>
 
@@ -243,13 +243,15 @@ export default function Hail({ record }) {
                 position: "absolute",
                 bottom: 0,
                 left: "50%",
-                transform: "translate(-50%, 40%)",
+                height: "300px",
+                transform: "translateX(-50%)",
+                width: "100%"
               }}
             />
             <div
               style={{
                 position: "absolute",
-                bottom: "2%",
+                bottom: "30px",
                 left: "50%",
                 transform: "translate(-50%)",
               }}
@@ -270,6 +272,11 @@ export default function Hail({ record }) {
                 bottom: "15px",
                 left: "50%",
                 transform: "translate(-50%)",
+                fontWeight: 700,
+                fontSize: "24px",
+                lineHeight: "31px",
+                color: "#c5c5c5",
+                margin: 0
               }}
             >
               {address}
