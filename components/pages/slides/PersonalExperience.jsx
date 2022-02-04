@@ -68,7 +68,7 @@ export default function PersonalExperience() {
               className={styles["experience__item-icon"]}
             />
             <p className={styles["experience__item-text"]}>
-              REGULAR ROOF HEALTH CHECKS
+              REGULAR ROOF<br />HEALTH CHECKS
             </p>
           </div>
           <div className={styles.experience__item}>
@@ -84,7 +84,7 @@ export default function PersonalExperience() {
               className={styles["experience__item-icon"]}
             />
             <p className={styles["experience__item-text"]}>
-              DEDICATED ROOF GENIUS
+              DEDICATED<br />ROOF GENIUS
             </p>
           </div>
         </div>

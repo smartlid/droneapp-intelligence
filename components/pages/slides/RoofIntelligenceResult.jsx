@@ -52,7 +52,7 @@ export default function Hail({ record, setPaginationClass }) {
       <div
         style={{
           position: "absolute",
-          top: "200px",
+          top: "300px",
           left: "200px",
           display: "flex",
           alignItems: "center",
@@ -65,7 +65,7 @@ export default function Hail({ record, setPaginationClass }) {
       <div
         style={{
           position: "absolute",
-          top: "120px",
+          top: "220px",
           left: "50%",
           transform: "translate(-50%)",
           display: "flex",
@@ -80,7 +80,7 @@ export default function Hail({ record, setPaginationClass }) {
       <div
         style={{
           position: "absolute",
-          top: "200px",
+          top: "300px",
           right: "250px",
           display: "flex",
         }}
@@ -105,10 +105,10 @@ export default function Hail({ record, setPaginationClass }) {
       <div
         style={{
           position: "absolute",
-          top: "240px",
+          top: "340px",
           left: "470px",
           width: "200px",
-          height: "120px",
+          height: "170px",
           border: "dashed #ACD7FF",
           borderWidth: "1px 1px 0 0",
         }}
@@ -118,10 +118,10 @@ export default function Hail({ record, setPaginationClass }) {
       <div
         style={{
           position: "absolute",
-          top: "210px",
+          top: "310px",
           left: "50%",
           width: "0",
-          height: "160px",
+          height: "200px",
           border: "dashed #ACD7FF",
           borderWidth: "1px 1px 0 0",
         }}
@@ -131,10 +131,10 @@ export default function Hail({ record, setPaginationClass }) {
       <div
         style={{
           position: "absolute",
-          top: "240px",
+          top: "340px",
           right: "490px",
           width: "180px",
-          height: "120px",
+          height: "170px",
           border: "dashed #ACD7FF",
           borderWidth: "1px 0 0 1px",
         }}
