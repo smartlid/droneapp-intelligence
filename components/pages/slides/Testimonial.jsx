@@ -23,17 +23,15 @@ export default function Testimonial() {
             animationFillMode: "forwards",
             animationDelay: "1s",
             width: "60%",
-            paddingTop: "20px",
+            paddingBottom: "20px",
             border: "solid #505050",
             borderWidth: "0 0 1px 0",
             position: "relative",
           }}
         >
           <h1
+            className={styles.title}
             style={{
-              margin: 0,
-              fontSize: "70px",
-              fontWeight: "bolder",
               color: "#075BBD",
             }}
           >

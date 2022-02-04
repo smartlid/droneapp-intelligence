@@ -22,16 +22,16 @@ export default function Benefits() {
             opacity: 0,
             animationFillMode: "forwards",
             animationDelay: "1s",
-            width: "60%",
-            paddingTop: "20px",
+            width: "80%",
+            paddingBottom: "30px",
             border: "solid #505050",
             borderWidth: "0 0 1px 0",
           }}
         >
-          <h1 style={{ margin: 0, fontSize: "70px", fontStyle: "bolder" }}>
+          <h1 className={styles.title}>
             Not Just <span style={{ color: "#505050" }}>Another</span>
           </h1>
-          <h1 style={{ margin: 0, fontSize: "70px", fontStyle: "bolder" }}>
+          <h1 className={styles.title}>
             Roofing Company
           </h1>
         </div>

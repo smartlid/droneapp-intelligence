@@ -52,16 +52,14 @@ export default function NextStepBase({ record }) {
           }}
         >
           <h1
+            className={styles.title}
             style={{
-              margin: "0 0 20px 0",
-              fontSize: "70px",
-              fontWeight: "bolder",
               color: "#075BBD",
             }}
           >
             Next Steps
           </h1>
-          <p style={{ color: "#858585", margin: 0 }}>
+          <p className={styles["sub-title"]} style={{ fontWeight: "bold", color: "#858585" }}>
             An overview of the next steps based on your roof analysis{" "}
           </p>
         </div>
@@ -75,7 +73,7 @@ export default function NextStepBase({ record }) {
         >
           <div
             style={{
-              flex: "0 0 50%",
+              flex: "0 0 45%",
               padding: "0 0 0 5%",
               color: "#868686",
               fontWeight: "bolder",
@@ -85,7 +83,7 @@ export default function NextStepBase({ record }) {
             { analysisActive && (
               <>
                 <p
-                  style={{ fontSize: "18px" }}
+                  style={{ fontSize: "20px" }}
                 >{`Remote Roofing’s team works with your insurance company to confirm damage analysis`}</p>
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <img src="/assets/clock.png" style={{ marginRight: "10px" }} />
@@ -98,7 +96,7 @@ export default function NextStepBase({ record }) {
             { estimateActive && (
               <>
                 <p
-                  style={{ fontSize: "18px" }}
+                  style={{ fontSize: "20px" }}
                 >{`Remote Roofing’s team ensures all the damages have received insurance coverage`}</p>
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <img src="/assets/clock.png" style={{ marginRight: "10px" }} />
@@ -111,7 +109,7 @@ export default function NextStepBase({ record }) {
             { installActive && (
               <>
                 <p
-                  style={{ fontSize: "18px" }}
+                  style={{ fontSize: "20px" }}
                 >{`Remote Roofing’s experienced team completes the roof replacement and installation `}</p>
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <img src="/assets/clock.png" style={{ marginRight: "10px" }} />

@@ -12,11 +12,11 @@ export default function About() {
       />
       <img
         src="/assets/drone1.png"
-        style={{ position: "absolute", left: "18%", top: "35%" }}
+        style={{ position: "absolute", left: "18%", top: "36%" }}
       />
       <img
         src="/assets/drone2.png"
-        style={{ position: "absolute", right: "25%", top: "45%" }}
+        style={{ position: "absolute", right: "25%", top: "46%" }}
       />
 
       <div className={styles.content}>
@@ -24,7 +24,9 @@ export default function About() {
           <h3
             className="fade-in-top-down"
             style={{
-              fontSize: "30px",
+              fontWeight: "bolder",
+              fontSize: "48px",
+              lineHeight: "48px",
               margin: 0,
               opacity: 0,
               animationFillMode: "forwards",
@@ -36,8 +38,8 @@ export default function About() {
           <h1
             className="fade-in-top-down"
             style={{
-              fontSize: "70px",
               fontStyle: "bolder",
+              fontSize: "96px",
               color: "#075BBD",
               margin: 0,
               opacity: 0,
@@ -48,7 +50,9 @@ export default function About() {
             ROOFING
           </h1>
         </div>
-        <img src="/assets/map.png" style={{ margin: "5% auto" }} />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <img src="/assets/map.png" />
+        </div>
       </div>
     </div>
   );

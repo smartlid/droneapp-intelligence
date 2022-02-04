@@ -22,37 +22,29 @@ export default function PersonalExperience() {
             opacity: 0,
             animationFillMode: "forwards",
             animationDelay: "1s",
-            width: "60%",
-            paddingTop: "20px",
+            width: "80%",
+            paddingBottom: "30px",
             border: "solid #505050",
             borderWidth: "0 0 1px 0",
           }}
         >
           <h1
+            className={styles.title}
             style={{
-              margin: 0,
-              fontSize: "70px",
-              fontWeight: "bolder",
               color: "#075BBD",
             }}
           >
             Personalized
           </h1>
           <div style={{ display: "flex", alignItems: "end" }}>
-            <h1
-              style={{
-                margin: "0 20px 0 0",
-                fontSize: "70px",
-                fontWeight: "bolder",
-              }}
-            >
+            <h1 className={styles.title}>
               experience
             </h1>
             <h3
               style={{
-                margin: "0 0 7px 0",
-                fontSize: "36px",
-                fontWeight: "bolder",
+                margin: "0 0 7px 15px",
+                fontSize: "50px",
+                fontWeight: "bold",
                 color: "#505050",
               }}
             >
