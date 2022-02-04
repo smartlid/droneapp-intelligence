@@ -54,7 +54,7 @@ export default function Storm({ setPaginationClass }) {
             <div
               style={{ margin: "0 auto", position: "relative", width: "70%" }}
             >
-              <img src="/assets/map.png" alt="map" />
+              <img src="/assets/map.png" alt="map" width="100%" height="100%" />
               <div
                 style={{
                   width: "100px",
@@ -91,17 +91,19 @@ export default function Storm({ setPaginationClass }) {
             <img
               src="/assets/wind.png"
               alt="wind"
-              style={{ position: "absolute", bottom: 0, left: 0 }}
+              style={{ position: "absolute", bottom: "20px", left: 0 }}
+              width="500"
             />
             <img
               src="/assets/wind.png"
               alt="wind"
               style={{
                 position: "absolute",
-                bottom: 0,
-                right: "20%",
+                bottom: "20px",
+                right: "10%",
                 transform: "rotate(5deg)",
               }}
+              width="400"
             />
           </div>
         </div>

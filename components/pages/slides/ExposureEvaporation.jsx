@@ -173,7 +173,7 @@ export default function ExposureEvaporation({ record }) {
           className={`${styles.slide} ${styles.dark} ${styles.exposure}`}
           style={{ width: "100%", height: "100%", position: "relative" }}
         >
-          <div className={styles.content} style={{ display: "flex" }}>
+          <div className={styles.content} style={{ display: "flex", justifyContent: "space-around" }}>
             <div style={{ flex: "0 0 50%", paddingRight: "5%" }}>
               <h1
                 className="fade-in-top-down"
@@ -196,7 +196,7 @@ export default function ExposureEvaporation({ record }) {
               />
             </div>
 
-            <div style={{ paddingLeft: "5%" }}>
+            <div>
               <div className="img-comp-container">
                 <div className="img-comp-img">
                   <img src={roof} width="450px" height="450px" />

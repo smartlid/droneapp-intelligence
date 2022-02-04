@@ -36,7 +36,7 @@ export default function Benefits() {
           </h1>
         </div>
 
-        <div style={{ marginTop: "3%", position: "relative" }}>
+        <div style={{ margin: "80px 0 50px", position: "relative" }}>
           <div className={styles["benefits__left-circle"]}>
             <img
               src="/assets/remote-roofing-logo-short-white.png"
