@@ -171,10 +171,10 @@ export default function ExposureEvaporation({ record }) {
       { deckingActive && (
         <div
           className={`${styles.slide} ${styles.dark} ${styles.exposure}`}
-          style={{ width: "100%", height: "100%", position: "relative" }}
+          style={{ width: "100%", height: "800px", position: "relative" }}
         >
           <div className={styles.content} style={{ display: "flex", justifyContent: "space-around" }}>
-            <div style={{ flex: "0 0 50%", paddingRight: "5%" }}>
+            <div style={{ flex: "0 0 45%", paddingRight: "5%" }}>
               <h1
                 className="fade-in-top-down"
                 style={{
@@ -192,29 +192,34 @@ export default function ExposureEvaporation({ record }) {
               </p>
               <img
                 src="/assets/scan-level.png"
-                style={{ marginTop: "150px" }}
+                style={{ marginTop: "70px" }}
               />
             </div>
 
-            <div>
-              <div className="img-comp-container">
-                <div className="img-comp-img">
-                  <img src={roof} width="450px" height="450px" />
+            <div style={{ marginTop: "-50px" }}>
+              <div style={{ position: "relative" }}>
+                <div className="img-comp-container">
+                  <div className="img-comp-img">
+                    <img src={roof} width="550px" height="500px" />
+                  </div>
+                  <div className="img-comp-img img-comp-overlay">
+                    <img
+                      src="/assets/healthy-roof.png"
+                      width="550px"
+                      height="500px"
+                    />
+                  </div>
                 </div>
-                <div className="img-comp-img img-comp-overlay">
-                  <img
-                    src="/assets/healthy-roof.png"
-                    width="450px"
-                    height="450px"
-                  />
-                </div>
+                <hr style={{ position: "absolute", left: "50px", bottom: "-100px", border: "dashed #E5E5E5", borderWidth: "0 0 0 2px", height: "95px"}} />
+                <hr style={{ position: "absolute", right: "50px", bottom: "-100px", border: "dashed #E5E5E5", borderWidth: "0 0 0 2px", height: "95px"}} />
               </div>
+
               <div
                 style={{
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  paddingTop: "50px",
+                  paddingTop: "100px",
                 }}
               >
                 <p style={{ fontWeight: "bold", fontSize: "24px", lineHeight: "47px", color: "#c5c5c5", margin: "0 0 0 -50px" }}>HEALTHY ROOF</p>
