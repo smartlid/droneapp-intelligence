@@ -42,7 +42,7 @@ export default function Testimonial() {
             style={{
               position: "absolute",
               right: "-50px",
-              transform: "translate(100%, -50%)",
+              transform: "translate(100%, -25%)",
             }}
           >
             <img
@@ -68,7 +68,7 @@ export default function Testimonial() {
             </div>
             <p>{`“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel porttitor augue. Cras eu scelerisque velit, a posuere sem. Ut rutrum maximus leo quis bibendum. Etiam sit amet lectus eu sapien egestas interdum.”`}</p>
             <div
-              style={{ width: "80%", height: "100%", background: "#c4c4c4" }}
+              style={{ width: "80%", height: "200px", background: "#c4c4c4" }}
             ></div>
           </div>
           <div className={styles.testimonial__item}>
@@ -82,7 +82,7 @@ export default function Testimonial() {
             </div>
             <p>{`“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel porttitor augue. Cras eu scelerisque velit, a posuere sem. Ut rutrum maximus leo quis bibendum. Etiam sit amet lectus eu sapien egestas interdum.”`}</p>
             <div
-              style={{ width: "80%", height: "100%", background: "#c4c4c4" }}
+              style={{ width: "80%", height: "200px", background: "#c4c4c4" }}
             ></div>
           </div>
         </div>
