@@ -22,7 +22,7 @@ export default function PersonalExperience() {
             opacity: 0,
             animationFillMode: "forwards",
             animationDelay: "1s",
-            width: "80%",
+            width: "85%",
             paddingBottom: "30px",
             border: "solid #505050",
             borderWidth: "0 0 1px 0",
@@ -46,6 +46,7 @@ export default function PersonalExperience() {
                 fontSize: "50px",
                 fontWeight: "bold",
                 color: "#505050",
+                whiteSpace: "nowarp",
               }}
             >
               (from start to finish)

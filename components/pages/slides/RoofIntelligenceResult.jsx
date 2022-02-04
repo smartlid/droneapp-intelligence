@@ -101,6 +101,45 @@ export default function Hail({ record, setPaginationClass }) {
           <p className={styles["sub-title"]} style={{ margin: "15px 0" }}>SOFT METAL</p>
         </div>
       </div>
+      
+      <div
+        style={{
+          position: "absolute",
+          top: "240px",
+          left: "470px",
+          width: "200px",
+          height: "120px",
+          border: "dashed #ACD7FF",
+          borderWidth: "1px 1px 0 0",
+        }}
+      >
+      </div>
+      
+      <div
+        style={{
+          position: "absolute",
+          top: "210px",
+          left: "50%",
+          width: "0",
+          height: "160px",
+          border: "dashed #ACD7FF",
+          borderWidth: "1px 1px 0 0",
+        }}
+      >
+      </div>
+
+      <div
+        style={{
+          position: "absolute",
+          top: "240px",
+          right: "490px",
+          width: "180px",
+          height: "120px",
+          border: "dashed #ACD7FF",
+          borderWidth: "1px 0 0 1px",
+        }}
+      >
+      </div>
 
       <img
         src="/assets/grid-pattern.png"

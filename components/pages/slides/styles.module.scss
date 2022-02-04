@@ -707,11 +707,11 @@
 .experience {
   &__item-container {
     margin-top: 80px;
-    width: 70%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     // grid-template-columns: 1fr 1fr;
-    grid-gap: 20%;
+    grid-gap: 10%;
   }
 
   &__item {
