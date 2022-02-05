@@ -37,9 +37,7 @@ export default function PersonalExperience() {
             Personalized
           </h1>
           <div style={{ display: "flex", alignItems: "end" }}>
-            <h1 className={styles.title}>
-              experience
-            </h1>
+            <h1 className={styles.title}>experience</h1>
             <h3
               style={{
                 margin: "0 0 7px 15px",
@@ -68,7 +66,9 @@ export default function PersonalExperience() {
               className={styles["experience__item-icon"]}
             />
             <p className={styles["experience__item-text"]}>
-              REGULAR ROOF<br />HEALTH CHECKS
+              REGULAR ROOF
+              <br />
+              HEALTH CHECKS
             </p>
           </div>
           <div className={styles.experience__item}>
@@ -84,7 +84,9 @@ export default function PersonalExperience() {
               className={styles["experience__item-icon"]}
             />
             <p className={styles["experience__item-text"]}>
-              DEDICATED<br />ROOF GENIUS
+              DEDICATED
+              <br />
+              ROOF GENIUS
             </p>
           </div>
         </div>

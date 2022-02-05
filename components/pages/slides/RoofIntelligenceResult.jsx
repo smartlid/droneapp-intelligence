@@ -23,7 +23,13 @@ export default function Hail({ record, setPaginationClass }) {
   return (
     <div
       className={`${styles.dark} ${styles.roof}`}
-      style={{ width: "100%", height: "900px", position: "relative", color: "#fff", background: "#000000" }}
+      style={{
+        width: "100%",
+        height: "900px",
+        position: "relative",
+        color: "#fff",
+        background: "#000000",
+      }}
     >
       <div
         style={{
@@ -42,9 +48,7 @@ export default function Hail({ record, setPaginationClass }) {
           height={140}
           style={{ marginRight: "30px" }}
         />
-        <h1
-          className={`${styles.title} fade-in-top-down`}
-        >
+        <h1 className={`${styles.title} fade-in-top-down`}>
           Roof Intelligence
         </h1>
       </div>
@@ -58,7 +62,12 @@ export default function Hail({ record, setPaginationClass }) {
           alignItems: "center",
         }}
       >
-        <p className={styles["sub-title"]} style={{ width: "120px", margin: "0 20px 0 0" }}>MOISTURE RISK</p>
+        <p
+          className={styles["sub-title"]}
+          style={{ width: "120px", margin: "0 20px 0 0" }}
+        >
+          MOISTURE RISK
+        </p>
         <img src={roof} width={100} style={{ borderRadius: "10px" }} />
       </div>
 
@@ -73,8 +82,23 @@ export default function Hail({ record, setPaginationClass }) {
         }}
       >
         <img src="/assets/cloud-rain.png" width={77} />
-        <h1 style={{ fontWeight: "bold", fontSize: "72px", lineHeight: "94px", color: "#ACD7FF", margin: "0 20px 0" }}>{impactCount}</h1>
-        <p className={styles["sub-title"]} style={{ width: "130px", margin: 0 }}>Hail Impact Detections</p>
+        <h1
+          style={{
+            fontWeight: "bold",
+            fontSize: "72px",
+            lineHeight: "94px",
+            color: "#ACD7FF",
+            margin: "0 20px 0",
+          }}
+        >
+          {impactCount}
+        </h1>
+        <p
+          className={styles["sub-title"]}
+          style={{ width: "130px", margin: 0 }}
+        >
+          Hail Impact Detections
+        </p>
       </div>
 
       <div
@@ -97,11 +121,15 @@ export default function Hail({ record, setPaginationClass }) {
           <img src="/assets/metal.png" width={50} />
         </div>
         <div>
-          <p className={styles["sub-title"]} style={{ margin: "15px 0" }}>SHINGLES</p>
-          <p className={styles["sub-title"]} style={{ margin: "15px 0" }}>SOFT METAL</p>
+          <p className={styles["sub-title"]} style={{ margin: "15px 0" }}>
+            SHINGLES
+          </p>
+          <p className={styles["sub-title"]} style={{ margin: "15px 0" }}>
+            SOFT METAL
+          </p>
         </div>
       </div>
-      
+
       <div
         style={{
           position: "absolute",
@@ -112,9 +140,8 @@ export default function Hail({ record, setPaginationClass }) {
           border: "dashed #ACD7FF",
           borderWidth: "1px 1px 0 0",
         }}
-      >
-      </div>
-      
+      ></div>
+
       <div
         style={{
           position: "absolute",
@@ -125,8 +152,7 @@ export default function Hail({ record, setPaginationClass }) {
           border: "dashed #ACD7FF",
           borderWidth: "1px 1px 0 0",
         }}
-      >
-      </div>
+      ></div>
 
       <div
         style={{
@@ -138,8 +164,7 @@ export default function Hail({ record, setPaginationClass }) {
           border: "dashed #ACD7FF",
           borderWidth: "1px 0 0 1px",
         }}
-      >
-      </div>
+      ></div>
 
       <img
         src="/assets/grid-pattern.png"
@@ -149,7 +174,7 @@ export default function Hail({ record, setPaginationClass }) {
           left: "50%",
           height: "300px",
           transform: "translateX(-50%)",
-          width: "100%"
+          width: "100%",
         }}
       />
       <div
@@ -179,7 +204,7 @@ export default function Hail({ record, setPaginationClass }) {
           fontSize: "24px",
           lineHeight: "31px",
           color: "#c5c5c5",
-          margin: 0
+          margin: 0,
         }}
       >
         {address}

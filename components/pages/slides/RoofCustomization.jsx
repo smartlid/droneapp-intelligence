@@ -41,10 +41,16 @@ export default function RoofCustomization() {
       <div className={styles["customize__bg-circle"]}></div>
 
       <div className={styles.content}>
-        <h1 className={`${styles.title} fade-in-top-down`} style={{ color: "#075bbd" }}>
+        <h1
+          className={`${styles.title} fade-in-top-down`}
+          style={{ color: "#075bbd" }}
+        >
           Customize My Roof
         </h1>
-        <p className={`${styles["sub-title"]} fade-in-top-down`} style={{ fontWeight: "bold" }}>
+        <p
+          className={`${styles["sub-title"]} fade-in-top-down`}
+          style={{ fontWeight: "bold" }}
+        >
           Choose and customize your new beautiful roof
         </p>
 

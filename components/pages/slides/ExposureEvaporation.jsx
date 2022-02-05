@@ -15,14 +15,18 @@ export default function ExposureEvaporation({ record }) {
 
     switch (item) {
       case "evaporation":
-        setImage("evaporation"); break;
+        setImage("evaporation");
+        break;
       case "build-up":
-        setImage("build-up"); break;
+        setImage("build-up");
+        break;
       case "decking":
-        setImage("decking"); break;
-      default: break;
+        setImage("decking");
+        break;
+      default:
+        break;
     }
-  }
+  };
 
   function initComparisons() {
     var x, i;
@@ -47,7 +51,7 @@ export default function ExposureEvaporation({ record }) {
       slider = document.createElement("DIV");
       slider.setAttribute("class", "img-comp-slider");
       slider.setAttribute("id", "img-comp-slider");
-      slider.innerHTML += "< >"
+      slider.innerHTML += "< >";
       img.parentElement.insertBefore(slider, img);
       slider.style.top = h / 2 - slider.offsetHeight / 2 + "px";
       slider.style.left = w / 2 - slider.offsetWidth / 2 + "px";
@@ -106,7 +110,7 @@ export default function ExposureEvaporation({ record }) {
       initComparisons();
     }
   }, [deckingActive]);
-  
+
   return (
     <>
       <div className={`${styles.slide} ${styles.dark} ${styles.exposure}`}>
@@ -117,9 +121,7 @@ export default function ExposureEvaporation({ record }) {
         />
 
         <div className={styles.content} style={{ textAlign: "right" }}>
-          <h1
-            className={`${styles.title} fade-in-top-down`}
-          >
+          <h1 className={`${styles.title} fade-in-top-down`}>
             Moisture Exposure
           </h1>
           <p className={`${styles["sub-title"]} fade-in-top-down`}>
@@ -155,11 +157,28 @@ export default function ExposureEvaporation({ record }) {
               }}
             >
               <div>
-                <div className={`${styles.exposure__title} ${evaporationActive ? styles.active : ""}`} onClick={() => onClickItem("evaporation")}>
+                <div
+                  className={`${styles.exposure__title} ${
+                    evaporationActive ? styles.active : ""
+                  }`}
+                  onClick={() => onClickItem("evaporation")}
+                >
                   Evaporation
                 </div>
-                <div className={`${styles.exposure__title} ${buildActive ? styles.active : ""}`} onClick={() => onClickItem("build-up")}>Build up</div>
-                <div className={`${styles.exposure__title} ${deckingActive ? styles.active : ""} ${styles.last}`} onClick={() => onClickItem("decking")}>
+                <div
+                  className={`${styles.exposure__title} ${
+                    buildActive ? styles.active : ""
+                  }`}
+                  onClick={() => onClickItem("build-up")}
+                >
+                  Build up
+                </div>
+                <div
+                  className={`${styles.exposure__title} ${
+                    deckingActive ? styles.active : ""
+                  } ${styles.last}`}
+                  onClick={() => onClickItem("decking")}
+                >
                   Decking
                 </div>
               </div>
@@ -168,12 +187,15 @@ export default function ExposureEvaporation({ record }) {
         </div>
       </div>
 
-      { deckingActive && (
+      {deckingActive && (
         <div
           className={`${styles.slide} ${styles.dark} ${styles.exposure}`}
           style={{ width: "100%", height: "800px", position: "relative" }}
         >
-          <div className={styles.content} style={{ display: "flex", justifyContent: "space-around" }}>
+          <div
+            className={styles.content}
+            style={{ display: "flex", justifyContent: "space-around" }}
+          >
             <div style={{ flex: "0 0 45%", paddingRight: "5%" }}>
               <h1
                 className="fade-in-top-down"
@@ -190,10 +212,7 @@ export default function ExposureEvaporation({ record }) {
                 A thermal depth-vision scan of the roof to detect risks for
                 moisture exposure.
               </p>
-              <img
-                src="/assets/scan-level.png"
-                style={{ marginTop: "70px" }}
-              />
+              <img src="/assets/scan-level.png" style={{ marginTop: "70px" }} />
             </div>
 
             <div style={{ marginTop: "-50px" }}>
@@ -210,8 +229,26 @@ export default function ExposureEvaporation({ record }) {
                     />
                   </div>
                 </div>
-                <hr style={{ position: "absolute", left: "50px", bottom: "-100px", border: "dashed #E5E5E5", borderWidth: "0 0 0 2px", height: "95px"}} />
-                <hr style={{ position: "absolute", right: "50px", bottom: "-100px", border: "dashed #E5E5E5", borderWidth: "0 0 0 2px", height: "95px"}} />
+                <hr
+                  style={{
+                    position: "absolute",
+                    left: "50px",
+                    bottom: "-100px",
+                    border: "dashed #E5E5E5",
+                    borderWidth: "0 0 0 2px",
+                    height: "95px",
+                  }}
+                />
+                <hr
+                  style={{
+                    position: "absolute",
+                    right: "50px",
+                    bottom: "-100px",
+                    border: "dashed #E5E5E5",
+                    borderWidth: "0 0 0 2px",
+                    height: "95px",
+                  }}
+                />
               </div>
 
               <div
@@ -222,8 +259,28 @@ export default function ExposureEvaporation({ record }) {
                   paddingTop: "100px",
                 }}
               >
-                <p style={{ fontWeight: "bold", fontSize: "24px", lineHeight: "47px", color: "#c5c5c5", margin: "0 0 0 -50px" }}>HEALTHY ROOF</p>
-                <p style={{ fontWeight: "bold", fontSize: "24px", lineHeight: "47px", color: "#c5c5c5", margin: "0 -20px 0 0" }}>MY ROOF</p>
+                <p
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "24px",
+                    lineHeight: "47px",
+                    color: "#c5c5c5",
+                    margin: "0 0 0 -50px",
+                  }}
+                >
+                  HEALTHY ROOF
+                </p>
+                <p
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "24px",
+                    lineHeight: "47px",
+                    color: "#c5c5c5",
+                    margin: "0 -20px 0 0",
+                  }}
+                >
+                  MY ROOF
+                </p>
               </div>
             </div>
           </div>

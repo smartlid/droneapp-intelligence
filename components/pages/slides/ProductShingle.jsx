@@ -6,7 +6,7 @@ export default function ProductShingle() {
   const [firstActive, setFirstActive] = useState(true);
   const [secondActive, setSecondActive] = useState(false);
   const [thirdActive, setThirdActive] = useState(false);
-  const [roof, setRoof] = useState("roof-shingle.glb")
+  const [roof, setRoof] = useState("roof-shingle.glb");
 
   const onClickItem = (item) => {
     setFirstActive(item === "first");
@@ -15,14 +15,18 @@ export default function ProductShingle() {
 
     switch (item) {
       case "first":
-        setRoof("roof-shingle.glb"); break;
+        setRoof("roof-shingle.glb");
+        break;
       case "second":
-        setRoof("roof-felt.glb"); break;
+        setRoof("roof-felt.glb");
+        break;
       case "third":
-        setRoof("roof-decking.glb"); break;
-      default: break;
+        setRoof("roof-decking.glb");
+        break;
+      default:
+        break;
     }
-  }
+  };
 
   return (
     <div
@@ -41,11 +45,26 @@ export default function ProductShingle() {
             className={`${styles.product__drone} fade-in-top-down`}
           />
           <div style={{ flex: "0 0 40%", paddingTop: "10%" }}>
-            <p className={`${styles.list} ${firstActive ? styles.active : ""}`} onClick={() => onClickItem("first")}>
+            <p
+              className={`${styles.list} ${firstActive ? styles.active : ""}`}
+              onClick={() => onClickItem("first")}
+            >
               Shingle Analysis
             </p>
-            <p className={`${styles.list} ${secondActive ? styles.active : ""}`} onClick={() =>onClickItem("second")}>Underlayment Analysis</p>
-            <p className={`${styles.list} ${thirdActive ? styles.active : ""} ${styles.last}`} onClick={() => onClickItem("third")}>Decking Analysis</p>
+            <p
+              className={`${styles.list} ${secondActive ? styles.active : ""}`}
+              onClick={() => onClickItem("second")}
+            >
+              Underlayment Analysis
+            </p>
+            <p
+              className={`${styles.list} ${thirdActive ? styles.active : ""} ${
+                styles.last
+              }`}
+              onClick={() => onClickItem("third")}
+            >
+              Decking Analysis
+            </p>
           </div>
           <div style={{ flex: "0 0 60%" }}>
             <model-viewer
@@ -73,7 +92,13 @@ export default function ProductShingle() {
               className={`${styles["product__title-logo"]} fade-in-top-down`}
             />
           </h1>
-          <div style={{ border: "2px solid #E5E5E5", background: "#E5E5E5", width: "100%" }}></div>
+          <div
+            style={{
+              border: "2px solid #E5E5E5",
+              background: "#E5E5E5",
+              width: "100%",
+            }}
+          ></div>
           <p className={`${styles.product__description} fade-in-top-down`}>
             A complete analysis and breakdown of the health of your roof
           </p>

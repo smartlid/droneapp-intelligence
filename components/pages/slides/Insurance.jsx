@@ -32,9 +32,7 @@ export default function Insurance({ setPaginationClass }) {
               width={90}
               style={{ marginRight: "20px" }}
             />
-            <h1 className={styles.title}>
-              INSURANCE
-            </h1>
+            <h1 className={styles.title}>INSURANCE</h1>
           </div>
           <p
             style={{

@@ -15,20 +15,24 @@ export default function NextStepBase({ record }) {
 
     switch (item) {
       case "analysis":
-        setImage("analysis.png"); break;
+        setImage("analysis.png");
+        break;
       case "estimate":
-        setImage("estimate.png"); break;
+        setImage("estimate.png");
+        break;
       case "install":
-        setImage("illustration.png"); break;
-      default: break;
+        setImage("illustration.png");
+        break;
+      default:
+        break;
     }
-  }
+  };
 
   useEffect(() => {
     if (record) {
       setMap(record.fields["3D-Model"][0]["url"]);
     }
-  }, [record])
+  }, [record]);
 
   return (
     <div className={`${styles.slide} ${styles["slide-about"]} ${styles.steps}`}>
@@ -59,7 +63,10 @@ export default function NextStepBase({ record }) {
           >
             Next Steps
           </h1>
-          <p className={styles["sub-title"]} style={{ fontWeight: "bold", color: "#858585" }}>
+          <p
+            className={styles["sub-title"]}
+            style={{ fontWeight: "bold", color: "#858585" }}
+          >
             An overview of the next steps based on your roof analysis{" "}
           </p>
         </div>
@@ -79,47 +86,77 @@ export default function NextStepBase({ record }) {
               fontWeight: "bolder",
             }}
           >
-            <p className={`${styles.list} ${analysisActive ? styles.active : ""}`} onClick={() => onClickItem("analysis")}>Analysis Confirmation</p>
-            { analysisActive && (
+            <p
+              className={`${styles.list} ${
+                analysisActive ? styles.active : ""
+              }`}
+              onClick={() => onClickItem("analysis")}
+            >
+              Analysis Confirmation
+            </p>
+            {analysisActive && (
               <>
                 <p
                   style={{ fontSize: "20px" }}
                 >{`Remote Roofing’s team works with your insurance company to confirm damage analysis`}</p>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <img src="/assets/clock.png" style={{ marginRight: "10px" }} />
+                  <img
+                    src="/assets/clock.png"
+                    style={{ marginRight: "10px" }}
+                  />
                   <p style={{ fontSize: "20px" }}>2 - 3 BUSINESS DAYS</p>
                 </div>
               </>
             )}
 
-            <p className={`${styles.list} ${estimateActive ? styles.active : ""}`} onClick={() => onClickItem("estimate")}>Finalized Estimate</p>
-            { estimateActive && (
+            <p
+              className={`${styles.list} ${
+                estimateActive ? styles.active : ""
+              }`}
+              onClick={() => onClickItem("estimate")}
+            >
+              Finalized Estimate
+            </p>
+            {estimateActive && (
               <>
                 <p
                   style={{ fontSize: "20px" }}
                 >{`Remote Roofing’s team ensures all the damages have received insurance coverage`}</p>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <img src="/assets/clock.png" style={{ marginRight: "10px" }} />
+                  <img
+                    src="/assets/clock.png"
+                    style={{ marginRight: "10px" }}
+                  />
                   <p style={{ fontSize: "20px" }}>3 BUSINESS DAYS</p>
                 </div>
               </>
             )}
 
-            <p className={`${styles.list} ${installActive ? styles.active : ""} ${styles.last}`} onClick={() => onClickItem("install")}>Roof Installation</p>
-            { installActive && (
+            <p
+              className={`${styles.list} ${
+                installActive ? styles.active : ""
+              } ${styles.last}`}
+              onClick={() => onClickItem("install")}
+            >
+              Roof Installation
+            </p>
+            {installActive && (
               <>
                 <p
                   style={{ fontSize: "20px" }}
                 >{`Remote Roofing’s experienced team completes the roof replacement and installation `}</p>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <img src="/assets/clock.png" style={{ marginRight: "10px" }} />
+                  <img
+                    src="/assets/clock.png"
+                    style={{ marginRight: "10px" }}
+                  />
                   <p style={{ fontSize: "20px" }}>24 HOURS</p>
                 </div>
               </>
             )}
           </div>
           <div style={{ flex: "0 0 50%", marginTop: "-50px" }}>
-            { !(analysisActive || estimateActive || installActive) && (
+            {!(analysisActive || estimateActive || installActive) && (
               <model-viewer
                 src={map}
                 alt="3D model of map"
@@ -129,7 +166,7 @@ export default function NextStepBase({ record }) {
                 autoplay
               ></model-viewer>
             )}
-            { (analysisActive || estimateActive || installActive) && (
+            {(analysisActive || estimateActive || installActive) && (
               <img src={`/assets/${image}`} style={{ width: "100%" }} />
             )}
           </div>

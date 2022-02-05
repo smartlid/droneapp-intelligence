@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 export default function RoofIntelligence({ record, setPaginationClass }) {
   const [map, setMap] = useState("");
-  
+
   useEffect(() => {
     setPaginationClass("light");
   }, [setPaginationClass]);
@@ -12,7 +12,7 @@ export default function RoofIntelligence({ record, setPaginationClass }) {
     if (record) {
       setMap(record.fields["3D-Model"][0]["url"]);
     }
-  }, [record])
+  }, [record]);
 
   return (
     <div className={`${styles.slide} ${styles["slide-roof"]} ${styles.roof}`}>

@@ -31,9 +31,7 @@ export default function Benefits() {
           <h1 className={styles.title}>
             Not Just <span style={{ color: "#505050" }}>Another</span>
           </h1>
-          <h1 className={styles.title}>
-            Roofing Company
-          </h1>
+          <h1 className={styles.title}>Roofing Company</h1>
         </div>
 
         <div style={{ margin: "80px 0 50px", position: "relative" }}>
