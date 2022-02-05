@@ -71,10 +71,10 @@ export default function Location() {
     if (id) {
       const recordKey = id[0];
       // Should use env for api keys
-      const base = new Airtable({ apiKey: "keyIwpcQ1fBXlxCcq" }).base(
-        "app4MqGYcYLzCIZTb"
+      const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
+        process.env.AIRTABLE_BASE_KEY
       );
-      base("Table 1").find(recordKey, (err, record) => {
+      base(process.env.AIRTABLE_TABLE_NAME).find(recordKey, (err, record) => {
         if (err) {
           console.error(err);
           return;
