@@ -1,34 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Intelligence-3
 
-## Getting Started
+Intelligence reported started late Jan 2022.
 
-First, run the development server:
+### Built with
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [React](https://reactjs.org)
+- [Next.js](https://nextjs.org)
+- [Model Viewer](https://modelviewer.dev)
+- [Airtable](https://www.npmjs.com/package/airtable)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Getting Started
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+#### Prerequisites
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+#### Local Development
 
-## Learn More
+1. Clone the repo
+    ```sh
+    git clone https://github.com/Remote-Roofing/intelligence-3.git
+    ```
+2. Install NPM packages
+    ```sh
+    npm install
+    ```
+3. Copy `.env.example` into `.env.local` and Enter your API in `.env.local`
 
-To learn more about Next.js, take a look at the following resources:
+    ```js
+    AIRTABLE_API_KEY = "ENTER YOUR AIRTABLE API KEY";
+    AIRTABLE_BASE_KEY = "ENTER YOUR AIRTABLE BASE";
+    AIRTABLE_TABLE_NAME = "ENTER YOUR AIRTABLE TABLE NAME";
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Run the project
+    ```sh
+    npm run dev
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Deploy to heroku
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Create an app in heroku
+2. Connect the app to the repository
+    - Heroku app dashboard -> Deploy -> Deployment method
+      There are 3 options. **Heroku Git**, **Github**, **Container Registry**.
+      Choose the **Github**(Connect to Github)
+      Select your github account and search this repository and click the ```connect``` button.
+    - Enable automatic deploy after app is connected to Github repo.
+      If this is enabled, every push to ```main``` branch will deploy a new version of the heroku app. **Deploys happen automatically**.
+3. Set config variables
+    - Heroku app dashboard -> Settings -> Config Vars
+      Click ```Reveal Config Vars``` button. Add 3 variables as followings:
+      - AIRTABLE_API_KEY: API key to access airtable
+      - AIRTABLE_BASE_KEY: key to access airtable base
+      - AIRTABLE_TABLE_NAME: table name to access

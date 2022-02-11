@@ -184,7 +184,7 @@ export default function RoofCustomization() {
           style={{
             width: "100%",
             height: "500px",
-            marginTop: "250px",
+            margin: "250px 0 50px 0",
             border: "none",
           }}
         />

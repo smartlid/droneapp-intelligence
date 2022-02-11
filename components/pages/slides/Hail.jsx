@@ -147,7 +147,7 @@ export default function Hail({ setPaginationClass }) {
         <div className={styles.hail__content}>
           <div
             style={{
-              margin: "0 55px 0 34.5px",
+              margin: "-180px 55px 0 34.5px",
               border: "0.5px dashed #E5E5E5",
             }}
           ></div>
