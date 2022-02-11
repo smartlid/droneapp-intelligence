@@ -44,8 +44,6 @@ export default function Hail({ record, setPaginationClass }) {
       >
         <img
           src="/assets/remote-roofing-logo-white.png"
-          width={220}
-          height={140}
           style={{ marginRight: "30px" }}
         />
         <h1 className={`${styles.title} fade-in-top-down`}>
