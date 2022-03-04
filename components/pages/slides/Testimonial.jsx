@@ -58,7 +58,7 @@ export default function Testimonial() {
 
         <div className={styles["testimonial__item-container"]}>
           <div className={styles.testimonial__item}>
-            <h4 className={styles.testimonial__name}>Steve favre</h4>
+            <h4 className={styles.testimonial__name}>Grady Herman</h4>
             <div className={styles.testimonial__rating}>
               <img src="/assets/star.png" />
               <img src="/assets/star.png" />
@@ -66,13 +66,13 @@ export default function Testimonial() {
               <img src="/assets/star.png" />
               <img src="/assets/star.png" />
             </div>
-            <p>{`“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel porttitor augue. Cras eu scelerisque velit, a posuere sem. Ut rutrum maximus leo quis bibendum. Etiam sit amet lectus eu sapien egestas interdum.”`}</p>
+            <p>{`“We had an excellent experience working with the Remote Roofing team to have our roof and skylight replaced. They worked with our insurance adjuster to ensure our claim would cover all aspects of the roof and skylight replacement. Their consultant was great scheduling the job. The crew arrived on time and worked tirelessly until the job was completed. The project supervisor, John, came by several times during the day while the job was being completed and kept us advised of status. We had one small issue with the skylight and that was addressed and fixed promptly. The job site was left very clean. Remote Roofing Is a reputable company and we would not hesitate to recommend them.”`}</p>
             <div
               style={{ width: "80%", height: "200px", background: "#c4c4c4" }}
             ></div>
           </div>
           <div className={styles.testimonial__item}>
-            <h4 className={styles.testimonial__name}>Steve favre</h4>
+            <h4 className={styles.testimonial__name}>Bryant Barnett</h4>
             <div className={styles.testimonial__rating}>
               <img src="/assets/star.png" />
               <img src="/assets/star.png" />
@@ -80,7 +80,7 @@ export default function Testimonial() {
               <img src="/assets/star.png" />
               <img src="/assets/star.png" />
             </div>
-            <p>{`“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel porttitor augue. Cras eu scelerisque velit, a posuere sem. Ut rutrum maximus leo quis bibendum. Etiam sit amet lectus eu sapien egestas interdum.”`}</p>
+            <p>{`“I couldn’t be happier with this company. They are so nice and professional. I had them put a roof and gutters on my rental. They did such a great job that I hired them to put a roof on the house I live in. The gutters are amazing! My neighbor asked if I would recommend them. I said yes and they roofed her house. She is happy too. I can’t recommend Remote Roofing enough. Hire them. You’ll be happy.”`}</p>
             <div
               style={{ width: "80%", height: "200px", background: "#c4c4c4" }}
             ></div>
